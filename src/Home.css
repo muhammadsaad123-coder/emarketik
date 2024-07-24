@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home {
+  text-align: center;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  /* background-color: lightcyan; */
+}
+
+.hero-content {
+  width: 45%;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2em; /* Reduced font size */
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.hero-content h2 {
+  font-size: 1.3em; /* Reduced font size */
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1em; /* Reduced font size */
+  color: #666;
+  margin: 0 0 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.signup-button, .watch-video-button {
+  padding: 10px 15px;
+  font-size: 1em;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.signup-button {
+ 
+  background-color: #ff0000;
+  border: 1px solid red;
+  color: #fff; /* Set initial text color to white */
+  padding: 8px 15px; /* Add padding if not already present */
+  text-decoration: none; /* Ensure no underline */
+  border-radius: 5px; /* Add border radius if needed */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+.signup-button:hover {
+
+  background-color: #fff; /* White background on hover */
+  color: #ff0000; /* Red text on hover */
+
+}
+
+
+
+
+
+
+
+
+
+
+.watch-video-button {
+  /* background-color: red;
+  color: white;
+  display: flex;
+  align-items: center; */
+  background-color: #ff0000;
+  color: #fff; /* Set initial text color to white */
+  padding: 8px 15px; /* Add padding if not already present */
+  text-decoration: none; /* Ensure no underline */
+  border-radius: 5px; /* Add border radius if needed */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.watch-video-button :hover{
+  background-color: #fff; /* White background on hover */
+  color: #ff0000; /* Red text on hover */
+}
+
+
+.watch-video-button::before {
+  content: '▶';
+  margin-right: 5px;
+}
+
+.hero-images img {
+  width: 60%;
+  height: auto;
+  margin-left: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-images img:hover {
+  transform: scale(1.05);
+}
+
+/* New Section */
+.info-section {
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.info-section h2 {
+  font-size: 2em; /* Reduced font size */
+  color: #333;
+}
+
+.info-section h3 {
+  font-size: 1em; /* Reduced font size */
+  color: #666;
+}
+
+.info-section p {
+  font-size: 1em; /* Reduced font size */
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quote-button {
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 10px;
+  color: red;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.quote-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.lastbutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* footer part */
+.footer {
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 2em; /* Reduced font size */
+}
+
+.footer h2 span {
+  color: #e53935;
+}
+
+.plans-pricing {
+  background-color: #ff0000;
+  border: 1px solid red;
+  color: #fff; /* Set initial text color to white */
+  padding: 8px 15px; /* Add padding if not already present */
+  text-decoration: none; /* Ensure no underline */
+  border-radius: 5px; /* Add border radius if needed */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.plans-pricing:hover {
+  background-color: #fff; /* White background on hover */
+  color: #ff0000; /* Red text on hover */
+}
+
+.footer p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stars {
+  width: auto;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.reviews span {
+  font-size: 1em;
+  color: #333333;
+}
+
+.social-media-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px; /* Add some space above the logos */
+  /* box-shadow: 0 4px 2px -2px gray; */
+}
+
+.social-media-logos img {
+  width: 15%; /* Adjusted size */
+  max-width: 100px; /* Adjusted size */
+  height: auto;
+  margin: 10px; /* Adjusted space between logos */
+  transition: transform 0.3s ease;
+}
+
+.social-media-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content, .hero-images {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1, .hero-content p {
+    font-size: 1.5em; /* Further reduced font size */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .signup-button, .watch-video-button {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-section h2, .info-section p {
+    font-size: 1.2em; /* Further reduced font size */
+  }
+
+  .quote-button {
+    font-size: 0.9em; /* Further reduced font size */
+    padding: 8px 15px;
+  }
+
+  .footer h2 {
+    font-size: 1.5em; /* Further reduced font size */
+  }
+
+  .plans-pricing {
+    padding: 10px 15px;
+    font-size: 0.9em; /* Further reduced font size */
+  }
+
+  .footer p {
+    font-size: 0.9em; /* Further reduced font size */
+  }
+
+  .social-media-logos img {
+    width: 20%; /* Adjusted size */
+    max-width: 80px; /* Adjusted size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1, .hero-content p {
+    font-size: 1em; /* Further reduced font size */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .signup-button, .watch-video-button {
+    padding: 8px 12px;
+    font-size: 0.8em; /* Further reduced font size */
+  }
+
+  .info-section h2 {
+    font-size: 1em; /* Further reduced font size */
+  }
+
+  .quote-button {
+    font-size: 0.8em; /* Further reduced font size */
+    padding: 6px 10px;
+  }
+
+  .footer h2 {
+    font-size: 1.2em; /* Further reduced font size */
+  }
+
+  .plans-pricing {
+    padding: 8px 10px;
+    font-size: 0.8em; /* Further reduced font size */
+  }
+
+  .footer p {
+    font-size: 0.8em; /* Further reduced font size */
+  }
+
+  .social-media-logos img {
+    width: 25%; /* Adjusted size */
+    max-width: 60px; /* Adjusted size */
+  }
+}
