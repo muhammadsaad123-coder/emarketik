@@ -1,22 +1,143 @@
-/* src/AboutUs.css */
 .about-us-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.about-us-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.aboutlogo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-us-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-us-content p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+.socialmedia p{
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #fff;
+  border: 6px solid red;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item.right::after {
+  left: -10px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid red;
+}
+
+.timeline-content h2 {
+  margin-top: 0;
+  color: red;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
+}
+
+.socialmedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.socialimage {
+  max-width: 150px;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
   .about-us-content {
-    max-width: 800px;
-    margin: auto;
+    padding: 0 20px;
   }
-  
+
   .about-us-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
   }
-  
+
   .about-us-content p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: 0.9em;
   }
-  
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+    padding-left: 50px;
+  }
+
+  .timeline-item.right::after {
+    left: 50px;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
+}
