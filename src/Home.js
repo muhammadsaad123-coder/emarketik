@@ -1,7 +1,5 @@
 import React from "react";
 import "./Home.css";
-// import Navbar from "./Navbar";
-// import Footer from "./Footer";
 import mainImage from "./assets/images/homeimg.png";
 import plan from "./assets/images/plan.png";
 import develop from "./assets/images/develop.png";

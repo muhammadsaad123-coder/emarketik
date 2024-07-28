@@ -1,0 +1,12 @@
+.client-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .client-logos-grid img {
+    width: 130%;
+    border: 3px solid black;
+  }
+  
