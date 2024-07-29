@@ -25,8 +25,6 @@ import bingAds from "./assets/images/bingAds.png";
 import pinterestAds from "./assets/images/pinterestAds.png";
 import social from "./assets/images/social.png";
 
-
-
 const Home = () => {
   return (
     <div className="home">
@@ -309,41 +307,45 @@ const Home = () => {
       </div>
 
       <div className="container">
-      <div className="lastbutton">
-      <h2 style={{ fontSize: '2em', color: '#333' }}>See how emarketick Limited® works for your business.</h2>
-        <img style={{width:'60%' , height:'auto'}}src={group} alt="Main" className="main-image" />
-        <button className="quote-button">Get a Free Quote</button>
-      </div>
-    </div>
-
-    <footer className="footer">
-      <div className="footer-content">
-        <h2>
-          Get everything you need to <span>manage and grow</span> your business.
-        </h2>
-        <button className="plans-pricing">Plans & Pricing</button>
-        <p>
-          We Provide Services to Manage Your Social Media Profiles and Websites
-          Working on Below Platforms
-        </p>
-        <div className="reviews">
-          <img src={stars} alt="4.5 stars" className="stars" />
-          <span>3,500+ Reviews</span>
+        <div className="lastbutton">
+          <h2 style={{ fontSize: "2em", color: "#333" }}>
+            See how emarketick Limited® works for your business.
+          </h2>
+          <img
+            style={{ width: "60%", height: "auto" }}
+            src={group}
+            alt="Main"
+            className="main-image"
+          />
+          <button className="quote-button">Get a Free Quote</button>
         </div>
-        <div className="social-media-logos">
-          <img src={meta} alt="Meta" />
-          <img src={social} alt="social" />
-          <img src={googleAds} alt="Google Ads" />
-          <img src={linkedinAds} alt="LinkedIn Ads" />
-          <img src={bingAds} alt="Bing Ads" />
-          <img src={pinterestAds} alt="Pinterest Ads" />
-        </div>
-
-        
       </div>
-    </footer>
 
-    {/* <Footer/> */}
+      <footer className="footer">
+        <div className="footer-content">
+          <h2>
+            Get everything you need to <span>manage and grow</span> your
+            business.
+          </h2>
+          <button className="plans-pricing">Plans & Pricing</button>
+          <p>
+            We Provide Services to Manage Your Social Media Profiles and
+            Websites Working on Below Platforms
+          </p>
+          <div className="reviews">
+            <img src={stars} alt="4.5 stars" className="stars" />
+            <span>3,500+ Reviews</span>
+          </div>
+          <div className="social-media-logos">
+            <img src={meta} alt="Meta" />
+            <img src={social} alt="social" />
+            <img src={googleAds} alt="Google Ads" />
+            <img src={linkedinAds} alt="LinkedIn Ads" />
+            <img src={bingAds} alt="Bing Ads" />
+            <img src={pinterestAds} alt="Pinterest Ads" />
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

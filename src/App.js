@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import OurClients from './OurClients'
+import SuccessStories from './pages/SuccessStories';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './App.css';
@@ -17,7 +18,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/our-clients" element={<OurClients />} />
-          {/* Add other routes here */}
+          <Route path="/success-stories" element={<SuccessStories />} />
+          
+          
         </Routes>
         <Footer />
       </div>
