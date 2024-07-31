@@ -28,7 +28,7 @@ import social from "./assets/images/social.png";
 const Home = () => {
   return (
     <div className="home">
-      {/* <Navbar /> */}
+      
 
       <div className="hero-section">
         <div className="hero-content">

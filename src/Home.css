@@ -5,6 +5,7 @@ body {
 
 .home {
   text-align: center;
+  background-color: aliceblue;
 }
 
 .hero-section {
@@ -57,10 +58,11 @@ body {
   background-color: #ff0000;
   border: 1px solid red;
   color: #fff; /* Set initial text color to white */
-  padding: 8px 15px; /* Add padding if not already present */
+  padding: 8px 8px; /* Add padding if not already present */
   text-decoration: none; /* Ensure no underline */
-  border-radius: 5px; /* Add border radius if needed */
+  border-radius: 4px; /* Add border radius if needed */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  width: auto;
 }
 .signup-button:hover {
 
@@ -89,6 +91,7 @@ body {
   text-decoration: none; /* Ensure no underline */
   border-radius: 5px; /* Add border radius if needed */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  width: auto;
 }
 
 .watch-video-button :hover{
@@ -145,9 +148,10 @@ body {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  display: flex;
+  display: inline-block;
   align-items: center;
   text-align: center;
+  width: auto;
 }
 
 .quote-button:hover {
@@ -194,6 +198,8 @@ body {
   text-decoration: none; /* Ensure no underline */
   border-radius: 5px; /* Add border radius if needed */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  width: auto;
+  display: inline-block;
 }
 
 .plans-pricing:hover {
