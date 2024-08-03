@@ -1,11 +1,13 @@
 .about-us-page {
   text-align: center;
   padding: 20px;
+  padding-top: 20px; 
 }
 
 .about-us-content {
   max-width: 800px;
   margin: auto;
+  padding-top: 10px; 
 }
 
 .aboutlogo img {
