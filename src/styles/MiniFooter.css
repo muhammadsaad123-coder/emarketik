@@ -1,0 +1,158 @@
+/* MiniFooter.css */
+.footer {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 2.2em;
+}
+
+.footer h2 span {
+    color: #e53935;
+}
+
+.plans-pricing {
+    background-color: #ff0000;
+    border: 1px solid red;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    width: auto;
+}
+
+.plans-pricing:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+.footer p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.stars {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.reviews span {
+    font-size: 1.1em;
+    color: #333333;
+}
+
+.social-media-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-media-logos img {
+    width: 15%; /* Increased size */
+    max-width: 120px; /* Increased size */
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-media-logos img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .footer h2 {
+        font-size: 1.8em;
+    }
+
+    .plans-pricing {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .footer p {
+        font-size: 1em;
+    }
+
+    .reviews span {
+        font-size: 1em;
+    }
+
+    .social-media-logos img {
+        width: 20%;
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer h2 {
+        font-size: 1.6em;
+    }
+
+    .plans-pricing {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
+    }
+
+    .reviews span {
+        font-size: 0.9em;
+    }
+
+    .social-media-logos img {
+        width: 25%;
+        max-width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer h2 {
+        font-size: 1.4em;
+    }
+
+    .plans-pricing {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+
+    .footer p {
+        font-size: 0.8em;
+    }
+
+    .reviews span {
+        font-size: 0.8em;
+    }
+
+    .social-media-logos img {
+        width: 30%;
+        max-width: 50px;
+    }
+}

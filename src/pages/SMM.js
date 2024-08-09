@@ -1,5 +1,8 @@
 import React from "react";
 import "../styles/SMM.css";
+import Benefits from "../components/Benefits";
+
+import MiniFooter from "../components/MiniFooter";
 import L10 from "../assets/images/smm/L10.webp";
 import img1 from "../assets/images/smm/1.webp";
 import img2 from "../assets/images/smm/2.webp";
@@ -8,28 +11,6 @@ import img4 from "../assets/images/smm/4.webp";
 import img5 from "../assets/images/smm/5.webp";
 import img6 from "../assets/images/smm/6.webp";
 import group from "../assets/images/group.png";
-import L1 from "../assets/images/smm/logo1.webp";
-import L2 from "../assets/images/smm/L2.webp";
-import L3 from "../assets/images/smm/L3.webp";
-import L4 from "../assets/images/smm/L4.webp";
-import L5 from "../assets/images/smm/L5.webp";
-import L6 from "../assets/images/smm/L6.webp";
-import L7 from "../assets/images/smm/L7.webp";
-import L8 from "../assets/images/smm/L8.webp";
-import L9 from "../assets/images/smm/L9.webp";
-import L11 from "../assets/images/smm/L11.webp";
-import L12 from "../assets/images/smm/L12.webp";
-
-
-
-import stars from "../assets/images/stars.png";
-import meta from "../assets/images/meta.png";
-import googleAds from "../assets/images/googleAds.png";
-import linkedinAds from "../assets/images/linkedinAds.png";
-import bingAds from "../assets/images/bingAds.png";
-import pinterestAds from "../assets/images/pinterestAds.png";
-import social from "../assets/images/social.png";
-
 
 const SMM = () => {
   return (
@@ -50,9 +31,9 @@ const SMM = () => {
       </p>
       <button className="smm-button">Plans & Pricing</button>
 
-      <h6>
+      <h3>
         We Provide Services to Manage Your Social Media Profiles and Websites
-      </h6>
+      </h3>
 
       <div>
         <img src={img1} alt="Social Media Example" className="img1" />
@@ -148,9 +129,7 @@ const SMM = () => {
 
       <div className="container">
         <div className="lastbutton">
-          <h2 style={{ fontSize: "2em", color: "#333" }}>
-            Let us assist in overseeing your online presence
-          </h2>
+          <h2>Let us assist in overseeing your online presence</h2>
           <h4 style={{ color: "#333" }}>
             Experience an all-inclusive solution for achieving success on the
             web. Benefit from innovative designs and a committed marketing team
@@ -165,108 +144,13 @@ const SMM = () => {
           />
           <button className="quote-button">Plan and Pricing</button>
         </div>
-
-        
       </div>
 
       {/* New Section */}
-      <div className="services-section">
-        <div className="services-header">
 
-        <div className="services-header">
-    <h2 className="services-title">Moreover, enjoy all of these exceptional benefits.</h2>
-   
-  
-  </div>
-        </div>
-        <div className="services-grid">
-          <div className="service-box">
-            <img src={L1} alt="Marketing Team" className="service-logo" />
-            <h3>Marketing Team</h3>
-            <p>Turbocharge your marketing</p>
-          </div>
-          <div className="service-box">
-            <img src={L2} alt="Website Management" className="service-logo" />
-            <h3>Website Management</h3>
-            <p>We Manage Your Website</p>
-          </div>
-          <div className="service-box">
-            <img src={L3} alt="Ecommerce" className="service-logo" />
-            <h3>Ecommerce</h3>
-            <p>Sell your products using our e-commerce solution</p>
-          </div>
-          <div className="service-box">
-            <img src={L4} alt="Payments" className="service-logo" />
-            <h3>Payments</h3>
-            <p>Get paid easier, faster, your way</p>
-          </div>
-          <div className="service-box">
-            <img src={L5} alt="Point of Sale" className="service-logo" />
-            <h3>Point of Sale</h3>
-            <p>All-in-one business management</p>
-          </div>
-          <div className="service-box">
-            <img src={L6} alt="CRM" className="service-logo" />
-            <h3>CRM</h3>
-            <p>Stay organized as you scale and grow</p>
-          </div>
-          <div className="service-box">
-            <img src={L7} alt="Forms" className="service-logo" />
-            <h3>Forms</h3>
-            <p>We Create forms for anything</p>
-          </div>
-          <div className="service-box">
-            <img src={L8} alt="Email Marketing" className="service-logo" />
-            <h3>Email Marketing</h3>
-            <p>Stay top of mind with email and text</p>
-          </div>
-          <div className="service-box">
-            <img src={L9} alt="Reputation" className="service-logo" />
-            <h3>Reputation</h3>
-            <p>Gain the edge of a good reputation</p>
-          </div>
-          <div className="service-box">
-            <img src={L10} alt="Social" className="service-logo" />
-            <h3>Social</h3>
-            <p>Streamline your social media</p>
-          </div>
-          <div className="service-box">
-            <img src={L11} alt="Content" className="service-logo" />
-            <h3>Content</h3>
-            <p>Level up your content marketing</p>
-          </div>
-          <div className="service-box">
-            <img src={L12} alt="Ads" className="service-logo" />
-            <h3>Ads</h3>
-            <p>Fuel growth with multi-channel ads</p>
-          </div>
-        </div>
-      </div>
-      <footer className="footer">
-        <div className="footer-content">
-          <h2>
-            Get everything you need to <span>manage and grow</span> your
-            business.
-          </h2>
-          <button className="plans-pricing">Plans & Pricing</button>
-          <p>
-            We Provide Services to Manage Your Social Media Profiles and
-            Websites Working on Below Platforms
-          </p>
-          <div className="reviews">
-            <img src={stars} alt="4.5 stars" className="stars" />
-            <span>3,500+ Reviews</span>
-          </div>
-          <div className="social-media-logos">
-            <img src={meta} alt="Meta" />
-            <img src={social} alt="social" />
-            <img src={googleAds} alt="Google Ads" />
-            <img src={linkedinAds} alt="LinkedIn Ads" />
-            <img src={bingAds} alt="Bing Ads" />
-            <img src={pinterestAds} alt="Pinterest Ads" />
-          </div>
-        </div>
-      </footer>
+      <Benefits />
+
+      <MiniFooter />
     </div>
   );
 };

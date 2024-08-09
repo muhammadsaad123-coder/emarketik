@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import './Navbar.css';
-import logo from './assets/images/logo.jpg'; 
-import whatsappLogo from './assets/images/whatsapp.png';
+import '../styles/Navbar.css';
+import logo from '../assets/images/logo.jpg';
+import whatsappLogo from '../assets/images/whatsapp.png';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  
+
   const isActive = (path) => location.pathname === path ? 'active' : '';
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <img src={logo} alt="Emarketick Logo" />
       </div>
-      <ul className="navbar-menu">
+      <div className="hamburger-icon" onClick={toggleMenu}>
+        {menuOpen ? (
+          <div className="close-icon">X</div>
+        ) : (
+          <>
+            <span></span>
+            <span></span>
+            <span></span>
+          </>
+        )}
+      </div>
+      <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
         <li><a href="/" className={isActive('/')}>Home</a></li>
         <li><a href="/about-us" className={isActive('/about-us')}>About Us</a></li>
         <li className="dropdown">

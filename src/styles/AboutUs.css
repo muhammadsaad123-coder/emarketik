@@ -1,7 +1,9 @@
+/* AboutUs.css */
 .about-us-page {
   text-align: center;
   padding: 20px;
   padding-top: 20px; 
+  background-color: aliceblue;
 }
 
 .about-us-content {
@@ -25,11 +27,11 @@
   color: #666;
   margin-bottom: 20px;
 }
-.socialmedia p{
+
+.socialmedia p {
   font-size: 1.2em;
   color: #666;
   margin-bottom: 20px;
-
 }
 
 .timeline {
@@ -108,6 +110,7 @@
 }
 
 .socialimage {
+ 
   max-width: 150px;
   margin: 10px;
 }

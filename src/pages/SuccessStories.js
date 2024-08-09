@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/SuccessStories.css";
+
+import MiniFooter from "../components/MiniFooter";
 import img1 from "../assets/images/success_img/1.webp";
 import img2 from "../assets/images/success_img/2.webp"; // Add actual image paths
 import img3 from "../assets/images/success_img/3.webp";
@@ -11,28 +13,19 @@ import img8 from "../assets/images/success_img/8.webp";
 import img9 from "../assets/images/success_img/9.webp";
 import img10 from "../assets/images/success_img/10.webp";
 
-import stars from "../assets/images/stars.png";
-import meta from "../assets/images/meta.png";
-import googleAds from "../assets/images/googleAds.png";
-import linkedinAds from "../assets/images/linkedinAds.png";
-import bingAds from "../assets/images/bingAds.png";
-import pinterestAds from "../assets/images/pinterestAds.png";
-import social from "../assets/images/social.png";
 import group from "../assets/images/group.png";
 
 const SuccessStories = () => {
   return (
-
-    
     <div className="success-stories-container">
-
-<header className="success-stories-header">
+      <header className="success-stories-header">
         <h2>Customer Success Stories</h2>
         <p>
-        We take pride in supporting the daily growth of small businesses like these.
+          We take pride in supporting the daily growth of small businesses like
+          these.
         </p>
       </header>
-      
+
       <div className="story-card">
         <img src={img1} alt="Land Mark Estate & Builders" />
         <h3>
@@ -191,32 +184,7 @@ const SuccessStories = () => {
           <button className="quote-button">Find your industry</button>
         </div>
       </div>
-
-      <footer className="footer">
-        <div className="footer-content">
-          <h2>
-            Get everything you need to <span>manage and grow</span> your
-            business.
-          </h2>
-          <button className="plans-pricing">Plans & Pricing</button>
-          <p>
-            We Provide Services to Manage Your Social Media Profiles and
-            Websites Working on Below Platforms
-          </p>
-          <div className="reviews">
-            <img src={stars} alt="4.5 stars" className="stars" />
-            <span>3,500+ Reviews</span>
-          </div>
-          <div className="social-media-logos">
-            <img src={meta} alt="Meta" />
-            <img src={social} alt="social" />
-            <img src={googleAds} alt="Google Ads" />
-            <img src={linkedinAds} alt="LinkedIn Ads" />
-            <img src={bingAds} alt="Bing Ads" />
-            <img src={pinterestAds} alt="Pinterest Ads" />
-          </div>
-        </div>
-      </footer>
+      <MiniFooter />
     </div>
   );
 };

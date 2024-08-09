@@ -1,15 +1,16 @@
 import React from "react";
-import "./AboutUs.css";
-import logo from "./assets/images/logo.jpg";
-import about from "./assets/images/about.png";
-import about2 from "./assets/images/about2.jpg";
-import googleAds from "./assets/images/googleAds.png";
-import meta from "./assets/images/meta.png";
-import linkedinAds from "./assets/images/linkedinAds.png";
-import bingAds from "./assets/images/bingAds.png";
-import pinterestAds from "./assets/images/pinterestAds.png";
-import social from "./assets/images/social.png";
-import stars from "./assets/images/stars.png";
+import "../styles/AboutUs.css";
+
+import MiniFooter from "../components/MiniFooter";
+import logo from "../assets/images/logo.jpg";
+import about from "../assets/images/about.png";
+import about2 from "../assets/images/about2.jpg";
+
+import meta from "../assets/images/meta.png";
+import googleAds from "../assets/images/googleAds.png";
+import linkedinAds from "../assets/images/linkedinAds.png";
+import bingAds from "../assets/images/bingAds.png";
+import pinterestAds from "../assets/images/pinterestAds.png";
 
 const AboutUs = () => {
   return (
@@ -145,34 +146,8 @@ const AboutUs = () => {
             website with visually stunning campaigns.
           </p>
         </div>
-
-        <footer className="footer">
-      <div className="footer-content">
-        <h2>
-          Get everything you need to <span>manage and grow</span> your business.
-        </h2>
-        <button className="plans-pricing">Plans & Pricing</button>
-        <p>
-          We Provide Services to Manage Your Social Media Profiles and Websites
-          Working on Below Platforms
-        </p>
-        <div className="reviews">
-          <img src={stars} alt="4.5 stars" className="stars" />
-          <span>3,500+ Reviews</span>
-        </div>
-        <div className="social-media-logos">
-          <img src={meta} alt="Meta" />
-          <img src={social} alt="social" />
-          <img src={googleAds} alt="Google Ads" />
-          <img src={linkedinAds} alt="LinkedIn Ads" />
-          <img src={bingAds} alt="Bing Ads" />
-          <img src={pinterestAds} alt="Pinterest Ads" />
-        </div>
-
-        
       </div>
-    </footer>
-      </div>
+      <MiniFooter />
     </div>
   );
 };

@@ -1,12 +1,13 @@
 import React from "react";
-import "./Footer.css";
-import logo from "./assets/images/logo.jpg";
-import meta2 from "./assets/images/metafooter.png";
-import google2 from "./assets/images/googlefooter.png";
-import linked2 from "./assets/images/linkedfooter.png";
-import bing2 from "./assets/images/bingfooter.png";
-import appStore from "./assets/images/appstore.png"; // Add paths to your app store images
-import googlePlay from "./assets/images/playstore.png";
+import "../styles/Footer.css";
+import logo from "../assets/images/logo.jpg";
+import meta2 from "../assets/images/metafooter.png";
+import google2 from "../assets/images/googlefooter.png";
+import linked2 from "../assets/images/linkedfooter.png";
+import bing2 from "../assets/images/bingfooter.png";
+import appStore from "../assets/images/appstore.png"; // Add paths to your app store images
+import googlePlay from "../assets/images/playstore.png";
+
 
 // Font Awesome Imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -71,7 +72,7 @@ const Footer = () => {
             <li><a href="/contact-us">Contact Us</a></li>
           </ul>
           <h3>UK Contact</h3>
-          <p>+44 (0) 747 606 7595</p>
+          <p>+44 (0) 2039166139</p>
           <h3>Pakistan Contact</h3>
           <p>+92 (0) 312 0444414</p>
         </div>

@@ -1,0 +1,82 @@
+.section_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    /* align-content: center; */
+
+}
+
+.section{
+    width: 30%;
+    text-align: center;
+    
+}
+
+.section h3 {
+    font-size: 1.3em; /* Reduced font size */
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.section p {
+    font-size: 1em; /* Reduced font size */
+    color: #666;
+    margin: 0 0 20px;
+}
+
+.sectionimg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.new-section {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .reasons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .reason {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center; /* Center text inside each reason */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .reason:hover {
+    background: #e0f7fa; /* Light blue background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  }
+  
+  .reason h3 {
+    color: #007bff;
+    font-size: 2rem;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .reason h4 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0; /* Space out headings with a top and bottom margin */
+  }
+  
+  .reason p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0; /* Remove default margin */
+  }
+  
+ 
