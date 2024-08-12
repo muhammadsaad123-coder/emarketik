@@ -129,3 +129,15 @@ body {
     justify-content: flex-start;
   }
 }
+
+
+.contact-link {
+  color: #ff0000; /* Customize the color as needed */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #333; /* Change color on hover */
+}

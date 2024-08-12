@@ -1,5 +1,6 @@
 {
   "name": "emarketick",
+  "homepage":"https://site2.ecwid.pk",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

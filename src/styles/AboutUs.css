@@ -1,31 +1,44 @@
-/* AboutUs.css */
+/* Container for the About Us page */
 .about-us-page {
   text-align: center;
-  padding: 20px;
-  padding-top: 20px; 
+  padding: 40px 20px;
   background-color: aliceblue;
 }
 
+/* Content within the About Us section */
 .about-us-content {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  padding-top: 10px; 
+  padding-top: 20px; 
 }
 
 .aboutlogo img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .about-us-content h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 
 .about-us-content p {
   font-size: 1.2em;
-  color: #666;
-  margin-bottom: 20px;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .socialmedia p {
@@ -34,29 +47,51 @@
   margin-bottom: 20px;
 }
 
+.socialimage {
+  max-width: 150px;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialimage:hover {
+  transform: scale(1.1);
+}
+
+/* Timeline styling */
 .timeline {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 40px auto;
   padding: 40px 0;
 }
 
 .timeline::after {
   content: "";
   position: absolute;
-  width: 6px;
+  width: 4px;
   background-color: red;
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  transform: translateX(-50%);
 }
 
 .timeline-item {
-  padding: 10px 40px;
+  padding: 20px 40px;
   position: relative;
   width: 50%;
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item.left {
+  left: 0;
+  transform: translateX(-30px);
+}
+
+.timeline-item.right {
+  left: 50%;
+  transform: translateX(30px);
 }
 
 .timeline-item::after {
@@ -64,20 +99,15 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  right: -10px;
   background-color: #fff;
   border: 6px solid red;
-  top: 15px;
+  top: 20px;
   border-radius: 50%;
   z-index: 1;
 }
 
-.timeline-item.left {
-  left: 0;
-}
-
-.timeline-item.right {
-  left: 50%;
+.timeline-item.left::after {
+  right: -10px;
 }
 
 .timeline-item.right::after {
@@ -88,31 +118,60 @@
   padding: 20px 30px;
   background-color: white;
   position: relative;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid red;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-content h2 {
   margin-top: 0;
   color: red;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .timeline-content p {
-  margin: 5px 0 0;
+  margin: 10px 0 0;
+  font-size: 1.1em;
+  color: #555;
 }
 
-.socialmedia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+.timeline-item:hover {
+  transform: translateX(0);
 }
 
-.socialimage {
- 
-  max-width: 150px;
-  margin: 10px;
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .about-us-content h1 {
+    font-size: 2em;
+  }
+
+  .about-us-content p {
+    font-size: 1.1em;
+  }
+
+  .timeline-item.left, 
+  .timeline-item.right {
+    transform: translateX(0);
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+    padding-left: 60px;
+  }
+
+  .timeline-item::after {
+    left: -30px;
+  }
+
+  .timeline::after {
+    left: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -120,6 +179,28 @@
     padding: 0 20px;
   }
 
+  .about-us-content h1 {
+    font-size: 1.7em;
+  }
+
+  .about-us-content p {
+    font-size: 1em;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+  }
+
+  .timeline-item::after {
+    left: 10px;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
   .about-us-content h1 {
     font-size: 1.5em;
   }
@@ -129,20 +210,14 @@
   }
 
   .timeline-item {
-    width: 100%;
-    padding-left: 50px;
+    padding-left: 30px;
   }
 
-  .timeline-item.right {
+  .timeline-item::after {
     left: 0;
-    padding-left: 50px;
-  }
-
-  .timeline-item.right::after {
-    left: 50px;
   }
 
   .timeline::after {
-    left: 20px;
+    left: 15px;
   }
 }

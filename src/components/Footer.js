@@ -71,10 +71,22 @@ const Footer = () => {
             <li><a href="/help-center">Online Help Center</a></li>
             <li><a href="/contact-us">Contact Us</a></li>
           </ul>
-          <h3>UK Contact</h3>
-          <p>+44 (0) 2039166139</p>
-          <h3>Pakistan Contact</h3>
-          <p>+92 (0) 312 0444414</p>
+          <div className="contact-section">
+        <h3>UK Contact</h3>
+        <p>
+          <a href="tel:02039166139" className="contact-link">
+            020 3916 6139
+          </a>
+        </p>
+
+        <h3>Outside UK Contact</h3>
+        <p>
+          <a href="tel:+442039166139" className="contact-link">
+            +44 2039166139
+          </a>
+        </p>
+      </div>
+          
         </div>
       </div>
       <div className="footer2-bottom">

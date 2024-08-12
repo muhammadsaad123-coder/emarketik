@@ -1,16 +1,18 @@
+/* Global styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: #fff;
-  box-shadow: 0 4px 2px -2px gray;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -18,10 +20,17 @@ body {
   z-index: 1000;
 }
 
+/* Logo styling */
 .navbar-logo img {
-  height: 40px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Hamburger icon styling */
 .hamburger-icon {
   display: none;
   flex-direction: column;
@@ -29,6 +38,7 @@ body {
   width: 30px;
   height: 20px;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .hamburger-icon span {
@@ -49,6 +59,7 @@ body {
   cursor: pointer;
 }
 
+/* Navbar menu styling */
 .navbar-menu {
   display: flex;
   list-style: none;
@@ -69,6 +80,7 @@ body {
   font-size: 14px;
   padding: 10px 15px;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 .navbar-menu a:hover {
@@ -79,6 +91,7 @@ body {
   color: red;
 }
 
+/* Dropdown styling */
 .arrow-icon {
   margin-left: 5px;
   border: solid black;
@@ -86,6 +99,7 @@ body {
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);
+  transition: transform 0.3s;
 }
 
 .dropdown-content {
@@ -93,18 +107,20 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 200px;
+  width: 220px;
+  border-radius: 5px;
 }
 
 .dropdown-content a {
-  padding: 10px 15px;
+  padding: 12px 15px;
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #333;
   border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
 }
 
 .dropdown-content a:hover {
@@ -115,31 +131,39 @@ body {
   display: block;
 }
 
+.navbar-menu .dropdown:hover .arrow-icon {
+  transform: rotate(-135deg);
+}
+
+/* Navbar actions (buttons) */
 .navbar-actions {
   display: flex;
   align-items: center;
-  padding: 20px;
 }
 
 .navbar-actions .whatsapp-icon img {
-  height: 24px;
+  height: 28px;
   margin-right: 15px;
-  /* padding: 20px; */
+  transition: transform 0.3s;
+}
+
+.navbar-actions .whatsapp-icon img:hover {
+  transform: scale(1.1);
 }
 
 .login-btn, .consultation-btn {
   margin: 0 10px;
-  padding: 8px 15px;
+  padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .login-btn {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .login-btn:hover {
@@ -151,8 +175,6 @@ body {
   background-color: #ff0000;
   border: 1px solid red;
   color: #fff;
-  transition: background-color 0.3s, color 0.3s;
-
 }
 
 .consultation-btn:hover {
@@ -160,18 +182,19 @@ body {
   color: #ff0000;
 }
 
+/* Responsive design for tablets */
 @media (max-width: 1024px) {
   .navbar {
     padding: 10px 20px;
   }
 
   .navbar-logo img {
-    height: 35px;
+    height: 40px;
   }
 
   .login-btn, .consultation-btn {
-    padding: 6px 10px;
-    font-size: 12px;
+    padding: 8px 15px;
+    font-size: 13px;
   }
 
   .navbar-menu li {
@@ -179,13 +202,14 @@ body {
   }
 }
 
+/* Responsive design for mobile devices */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
   }
 
   .navbar-logo img {
-    height: 30px;
+    height: 35px;
   }
 
   .navbar-menu {
@@ -198,6 +222,7 @@ body {
     left: 0;
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
   }
 
   .navbar-menu.open {
@@ -231,13 +256,14 @@ body {
   }
 }
 
+/* Responsive design for very small screens */
 @media (max-width: 480px) {
   .navbar {
     padding: 10px 10px;
   }
 
   .navbar-logo img {
-    height: 25px;
+    height: 30px;
   }
 
   .navbar-menu a {
@@ -258,6 +284,7 @@ body {
   }
 }
 
+/* Main content padding adjustment */
 .main-content {
   padding-top: 80px; /* Adjust this value based on your navbar height */
 }

@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   padding-top: 60px; 
-  
 }
 
 .home {
@@ -13,154 +12,156 @@ body {
 
 .hero-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 30px;
-  /* padding-top: 80px;  */
-  /* background-color: lightcyan; */
+  justify-content: center;
+  padding: 40px 30px;
+  background-color: #f5f9fc;
+  margin-bottom: 30px;
+  border-radius: 15px;
 }
 
 .hero-content {
-  width: 45%;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
   text-align: left;
+  margin: 10px;
 }
 
 .hero-content h1 {
-  font-size: 2em; /* Reduced font size */
-  margin: 0 0 10px;
+  font-size: 2.5em;
+  margin: 0 0 20px;
   color: #333;
+  line-height: 1.2;
 }
 
 .hero-content h2 {
-  font-size: 1.3em; /* Reduced font size */
+  font-size: 1.5em;
   margin: 0 0 10px;
-  color: #333;
+  color: #666;
 }
 
 .hero-content p {
-  font-size: 1em; /* Reduced font size */
-  color: #666;
-  margin: 0 0 20px;
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .hero-buttons {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-.signup-button, .watch-video-button {
-  padding: 10px 15px;
-  font-size: 1em;
+.signup-button,
+.watch-video-button {
+  padding: 12px 20px;
+  font-size: 1.1em;
   margin-right: 10px;
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .signup-button {
- 
   background-color: #ff0000;
-  border: 1px solid red;
-  color: #fff; /* Set initial text color to white */
-  padding: 8px 8px; /* Add padding if not already present */
-  text-decoration: none; /* Ensure no underline */
-  border-radius: 4px; /* Add border radius if needed */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
-  width: auto;
+  color: #fff;
 }
+
 .signup-button:hover {
-
-  background-color: #fff; /* White background on hover */
-  color: #ff0000; /* Red text on hover */
-
+  background-color: #fff;
+  color: #ff0000;
+  transform: translateY(-3px);
 }
-
-
-
-
-
-
-
-
-
 
 .watch-video-button {
-  /* background-color: red;
-  color: white;
-  display: flex;
-  align-items: center; */
+  background-color: transparent;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+}
+
+.watch-video-button:hover {
   background-color: #ff0000;
-  color: #fff; /* Set initial text color to white */
-  padding: 8px 15px; /* Add padding if not already present */
-  text-decoration: none; /* Ensure no underline */
-  border-radius: 5px; /* Add border radius if needed */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
-  width: auto;
+  color: #fff;
+  transform: translateY(-3px);
 }
-
-.watch-video-button :hover{
-  background-color: #fff; /* White background on hover */
-  color: #ff0000; /* Red text on hover */
-}
-
 
 .watch-video-button::before {
   content: '▶';
-  margin-right: 5px;
+  margin-right: 8px;
+}
+
+.hero-images {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+  margin: 10px;
 }
 
 .hero-images img {
-  width: 60%;
+  width: 80%;
   height: auto;
-  margin-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
 .hero-images img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* New Section */
+/* Info Section Styling */
 .info-section {
-  padding: 20px 30px;
+  padding: 40px 30px;
   background-color: #fff;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info-section h2 {
-  font-size: 2em; /* Reduced font size */
+  font-size: 2.2em;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .info-section h3 {
-  font-size: 1em; /* Reduced font size */
+  font-size: 1.5em;
   color: #666;
+  margin-bottom: 15px;
 }
 
 .info-section p {
-  font-size: 1em; /* Reduced font size */
-  color: #666;
+  font-size: 1.1em;
+  color: #555;
   max-width: 800px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
+/* Quote Button Styling */
 .quote-button {
   background-color: transparent;
-  border: 2px solid red;
+  border: 2px solid #ff0000;
   border-radius: 10px;
-  color: red;
-  padding: 10px 20px;
-  font-size: 1em;
+  color: #ff0000;
+  padding: 12px 25px;
+  font-size: 1.1em;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  display: inline-block;
-  align-items: center;
-  text-align: center;
-  width: auto;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin-top: 30px;
 }
 
 .quote-button:hover {
-  background-color: red;
+  background-color: #ff0000;
   color: white;
+  transform: translateY(-3px);
 }
 
 .lastbutton {
@@ -168,9 +169,8 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
-
 
 /* Responsive styling */
 @media (max-width: 1024px) {
@@ -179,91 +179,57 @@ body {
     text-align: center;
   }
 
-  .hero-content, .hero-images {
+  .hero-content,
+  .hero-images {
     width: 90%;
     margin-bottom: 20px;
   }
 
-  .hero-content h1, .hero-content p {
-    font-size: 1.5em; /* Further reduced font size */
+  .hero-content h1,
+  .hero-content p {
+    font-size: 1.8em;
   }
 
   .hero-buttons {
     flex-direction: column;
-  }
-
-  .signup-button, .watch-video-button {
-    margin: 10px 0;
+    gap: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  .info-section h2, .info-section p {
-    font-size: 1.2em; /* Further reduced font size */
+  .info-section h2,
+  .info-section p {
+    font-size: 1.4em;
   }
 
   .quote-button {
-    font-size: 0.9em; /* Further reduced font size */
-    padding: 8px 15px;
-  }
-
-  .footer h2 {
-    font-size: 1.5em; /* Further reduced font size */
-  }
-
-  .plans-pricing {
-    padding: 10px 15px;
-    font-size: 0.9em; /* Further reduced font size */
-  }
-
-  .footer p {
-    font-size: 0.9em; /* Further reduced font size */
-  }
-
-  .social-media-logos img {
-    width: 20%; /* Adjusted size */
-    max-width: 80px; /* Adjusted size */
+    font-size: 1em;
+    padding: 10px 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-content h1, .hero-content p {
-    font-size: 1em; /* Further reduced font size */
+  .hero-content h1,
+  .hero-content p {
+    font-size: 1.5em;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .signup-button, .watch-video-button {
-    padding: 8px 12px;
-    font-size: 0.8em; /* Further reduced font size */
+  .signup-button,
+  .watch-video-button {
+    padding: 10px 15px;
+    font-size: 1em;
   }
 
   .info-section h2 {
-    font-size: 1em; /* Further reduced font size */
+    font-size: 1.3em;
   }
 
   .quote-button {
-    font-size: 0.8em; /* Further reduced font size */
-    padding: 6px 10px;
+    font-size: 0.9em;
+    padding: 8px 15px;
   }
 
-  .footer h2 {
-    font-size: 1.2em; /* Further reduced font size */
-  }
-
-  .plans-pricing {
-    padding: 8px 10px;
-    font-size: 0.8em; /* Further reduced font size */
-  }
-
-  .footer p {
-    font-size: 0.8em; /* Further reduced font size */
-  }
-
-  .social-media-logos img {
-    width: 25%; /* Adjusted size */
-    max-width: 60px; /* Adjusted size */
+  .hero-images img {
+    width: 90%;
   }
 }
