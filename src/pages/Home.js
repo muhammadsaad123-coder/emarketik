@@ -18,13 +18,27 @@ import ads from "../assets/images/ads.png";
 import mobile from "../assets/images/mobile.png";
 import group from "../assets/images/group.png";
 
+import L1 from "../assets/images/home_logo/L1.webp";
+import L2 from "../assets/images/home_logo/L2.webp";
+import L3 from "../assets/images/home_logo/L3.webp";
+import L4 from "../assets/images/home_logo/L4.webp";
+import L5 from "../assets/images/home_logo/L5.webp";
+import L6 from "../assets/images/home_logo/L6.webp";
+import L7 from "../assets/images/home_logo/L7.webp";
+import L8 from "../assets/images/home_logo/L8.webp";
+import L9 from "../assets/images/home_logo/L9.webp";
+import L10 from "../assets/images/home_logo/L10.webp";
+import L11 from "../assets/images/home_logo/L11.webp";
+import L12 from "../assets/images/home_logo/L12.webp";
+import L13 from "../assets/images/home_logo/L13.webp";
+
+
+
 
 
 const Home = () => {
   return (
     <div className="home">
-      
-
       <div className="hero-section">
         <div className="hero-content">
           <h1>Get everything you need to manage and grow your</h1>
@@ -57,7 +71,10 @@ const Home = () => {
 
       <div className="hero-section">
         <div className="hero-content">
-          <h2>OUR MARKETING TEAM</h2>
+          <div class="header-with-logo">
+            <img src={L1} alt="Logo" className="logo" />
+            <h2>OUR MARKETING TEAM</h2>
+          </div>
           <h1>Turbocharge your Digital Marketing</h1>
           <p>
             Leverage industry specific marketing programs and a dedicated
@@ -79,7 +96,10 @@ const Home = () => {
           <img src={develop} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>WEBSITE DEVELOPMENT SERVICE</h2>
+        <div class="header-with-logo">
+            <img src={L2} alt="Logo" className="logo" />
+            <h2>WEBSITE DEVELOPMENT SERVICE</h2>
+          </div>
           <h1>We Develop Website or Online Store</h1>
           <p>
             Emarketick Limited offers top-notch website and online store
@@ -93,7 +113,10 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-          <h2>ECOMMERCE DEVELOPMENT & MANAGEMENT</h2>
+        <div class="header-with-logo">
+            <img src={L3} alt="Logo" className="logo" />
+            <h2>Sell your products online</h2>
+          </div>
           <h1>Sell your products online</h1>
           <p>
             Emarketick excels in ecommerce development, creating seamless online
@@ -113,7 +136,10 @@ const Home = () => {
           <img src={payment} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>PAYMENTS GATEWAY INTEGRATIONS AND API'S</h2>
+        <div class="header-with-logo">
+            <img src={L4} alt="Logo" className="logo" />
+            <h2>PAYMENTS GATEWAY INTEGRATIONS AND API'S</h2>
+          </div>
           <h1>Accept and manage payments</h1>
           <p>
             Emarketick ensures secure transactions by integrating versatile
@@ -127,7 +153,10 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-          <h2>ONLINE POINT OF SALE</h2>
+        <div class="header-with-logo">
+            <img src={L5} alt="Logo" className="logo" />
+            <h2>ONLINE POINT OF SALE</h2>
+          </div>
           <h1>Simplify business management</h1>
           <p>
             Emarketick offers online point of sale solutions, enabling
@@ -147,7 +176,10 @@ const Home = () => {
           <img src={crm} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>ONLINE CRM SYSTEM</h2>
+        <div class="header-with-logo">
+            <img src={L6} alt="Logo" className="logo" />
+            <h2>ONLINE CRM SYSTEM</h2>
+          </div>
           <h1>Stay organized your way</h1>
           <p>
             Emarketick delivers comprehensive online CRM systems, empowering
@@ -161,7 +193,10 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-          <h2>FORMS CREATION AND DEPLOYMENT ON WEBSITES</h2>
+        <div class="header-with-logo">
+            <img src={L7} alt="Logo" className="logo" />
+            <h2>FORMS CREATION AND DEPLOYMENT ON WEBSITES</h2>
+          </div>
           <h1>Create custom forms</h1>
           <p>
             Emarketick specializes in crafting custom forms tailored to
@@ -181,7 +216,10 @@ const Home = () => {
           <img src={email} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>EMAIL MARKETING INTEGRATION</h2>
+        <div class="header-with-logo">
+            <img src={L8} alt="Logo" className="logo" />
+            <h2>EMAIL MARKETING INTEGRATION</h2>
+          </div>
           <h1>Send automated emails</h1>
           <p>
             Emarketick automates email sending processes, delivering timely and
@@ -195,7 +233,11 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-          <h2>TEXT MARKETING / BRANDED SMS INTEGRATION</h2>
+          
+          <div class="header-with-logo">
+            <img src={L8} alt="Logo" className="logo" />
+            <h2>TEXT MARKETING / BRANDED SMS INTEGRATION</h2>
+          </div>
           <h1>Nurture customers via text</h1>
           <p>
             Emarketick offers branded SMS integration services through APIs,
@@ -216,7 +258,11 @@ const Home = () => {
           <img src={media} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>SOCIAL MEDIA MANAGMENT SERVICES</h2>
+         
+          <div class="header-with-logo">
+            <img src={L9} alt="Logo" className="logo" />
+            <h2>SOCIAL MEDIA MANAGMENT SERVICES</h2>
+          </div>
           <h1>We Control Your Social Media Profiles</h1>
           <p>
             Emarketick offers comprehensive social media management services,
@@ -231,7 +277,11 @@ const Home = () => {
 
       <div className="hero-section">
         <div className="hero-content">
-          <h2>REPUTATION REVIEWS MANAGEMENT</h2>
+        <div class="header-with-logo">
+            <img src={L10} alt="Logo" className="logo" />
+            <h2>REPUTATION REVIEWS MANAGEMENT</h2>
+          </div>
+          
           <h1>Stand out with excellent reviews</h1>
           <p>
             Emarketick offers review management services, ensuring businesses
@@ -252,7 +302,11 @@ const Home = () => {
           <img src={seo} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>SEO SERVICES FOR YOUR BUSINESS</h2>
+          
+          <div class="header-with-logo">
+            <img src={L11} alt="Logo" className="logo" />
+            <h2>SEO SERVICES FOR YOUR BUSINESS</h2>
+          </div>
           <h1>Show up at the top of Search</h1>
           <p>
             Emarketick provides comprehensive SEO services and search ad
@@ -267,7 +321,11 @@ const Home = () => {
 
       <div className="hero-section">
         <div className="hero-content">
-          <h2>ADS / MEDIA BUYING SERVICES</h2>
+          
+          <div class="header-with-logo">
+            <img src={L12} alt="Logo" className="logo" />
+            <h2>ADS / MEDIA BUYING SERVICES</h2>
+          </div>
           <h1>Run ads where it counts</h1>
           <p>
             Emarketick delivers targeted advertising and media buying services,
@@ -288,7 +346,11 @@ const Home = () => {
           <img src={mobile} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          <h2>emarketick Mobile App Coming Soon</h2>
+          
+          <div class="header-with-logo">
+            <img src={L13} alt="Logo" className="logo" />
+            <h2>emarketick Mobile App Coming Soon</h2>
+          </div>
           <h1>Manage All From Your Phone</h1>
           <p>
             Manage your team and customers using our mobile app coming soon so
@@ -317,8 +379,6 @@ const Home = () => {
       </div>
 
       <MiniFooter />
-
-      
     </div>
   );
 };

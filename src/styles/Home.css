@@ -8,6 +8,10 @@ body {
   text-align: center;
   background-color: aliceblue;
   padding-top: 60px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .hero-section {
@@ -77,6 +81,8 @@ body {
   background-color: #fff;
   color: #ff0000;
   transform: translateY(-3px);
+  border: 2px solid #ff0000; /* Add a red border */
+  
 }
 
 .watch-video-button {
@@ -170,6 +176,18 @@ body {
   align-items: center;
   text-align: center;
   margin-bottom: 50px;
+  
+}
+
+.header-with-logo {
+  display: flex;
+  align-items: center; /* Aligns the logo and heading vertically in the center */
+}
+
+.logo {
+  margin-right: 25px; /* Adds space between the logo and the heading */
+  width: 40px; /* Adjust the size of the logo as needed */
+  height: auto; /* Keeps the aspect ratio of the logo */
 }
 
 /* Responsive styling */
@@ -232,4 +250,21 @@ body {
   .hero-images img {
     width: 90%;
   }
+}
+
+.container{
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+
+ 
+   
+   
+  }
+  
+  
 }

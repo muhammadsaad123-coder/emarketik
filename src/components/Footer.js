@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
-import logo from "../assets/images/logo.jpg";
+import logo from "../assets/images/logo.webp";
 import meta2 from "../assets/images/metafooter.png";
 import google2 from "../assets/images/googlefooter.png";
 import linked2 from "../assets/images/linkedfooter.png";
@@ -34,24 +34,37 @@ const Footer = () => {
           <h3>Our Services</h3>
           <ul>
             <li><a href="/marketing-team">Marketing Team</a></li>
-            <li><a href="/website">Website</a></li>
-            <li><a href="/ecommerce">Ecommerce</a></li>
-            <li><a href="/payments">Payments</a></li>
-            <li><a href="/point-of-sale">Point of Sale</a></li>
-            <li><a href="/crm">CRM</a></li>
-            <li><a href="/forms">Forms</a></li>
+            <li><a href="/contact">Website</a></li>
+            <li><a href="/contact">Ecommerce</a></li>
+            <li><a href="/contact">Payments</a></li>
+            <li><a href="/contact">Point of Sale</a></li>
+            <li><a href="/contact">CRM</a></li>
+            <li><a href="/contact">Forms</a></li>
           </ul>
         </div>
         <div className="footer2-column">
-          <h3>Services by Industry</h3>
+          {/* <h3>Services by Industry</h3> */}
           <ul>
             <li><a href="/email-marketing">Email Marketing</a></li>
-            <li><a href="/listings">Listings</a></li>
-            <li><a href="/reputation">Reputation</a></li>
-            <li><a href="/social">Social</a></li>
-            <li><a href="/content">Content</a></li>
-            <li><a href="/ads">Ads</a></li>
-            <li><a href="/intelligence">Intelligence</a></li>
+            <li><a href="/contact">Listings</a></li>
+            <li><a href="/contact">Reputation</a></li>
+            <li><a href="/smm">Social</a></li>
+            <li><a href="/contact">Content</a></li>
+            <li><a href="/contact">Ads</a></li>
+            <li><a href="/contact">Intelligence</a></li>
+          </ul>
+        </div>
+
+        <div className="footer2-column">
+          <h3>Services by Industry</h3>
+          <ul>
+            <li><a href="/contact">E-Commerce</a></li>
+            <li><a href="/contact">Contractor</a></li>
+            <li><a href="/contact">Fitness</a></li>
+            <li><a href="/contact">Medical</a></li>
+            <li><a href="/contact">Real Estate</a></li>
+            <li><a href="/contact">Attorney</a></li>
+            <li><a href="/contact">More Industries...</a></li>
           </ul>
         </div>
         <div className="footer2-column">
@@ -61,15 +74,15 @@ const Footer = () => {
             <li><a href="/creative-services">Creative Services</a></li>
             <li><a href="/success-stories">Success Stories</a></li>
             <li><a href="/our-clients">Our Clients</a></li>
-            <li><a href="/partner-with-us">Partner With Us</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Partner With Us</a></li>
+            <li><a href="/contact">Blog</a></li>
           </ul>
         </div>
         <div className="footer2-column">
           <h3>Support</h3>
           <ul>
-            <li><a href="/help-center">Online Help Center</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/contact">Online Help Center</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
           <div className="contact-section">
         <h3>UK Contact</h3>

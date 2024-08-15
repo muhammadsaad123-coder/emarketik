@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
-import logo from '../assets/images/logo.jpg';
-import whatsappLogo from '../assets/images/whatsapp.png';
+import logo from '../assets/images/logo.webp';
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,10 +50,10 @@ const Navbar = () => {
         <li><a href="/contact" className={isActive('/contact')}>Contact</a></li>
       </ul>
       <div className="navbar-actions">
-        <a href="/whatsapp" className="whatsapp-icon">
-          <img src={whatsappLogo} alt="WhatsApp Logo" />
-        </a>
-        <a href="/login" className="login-btn">Login</a>
+        
+      <a href="https://app.emarketick.com/?ng=client/login/" className="login-btn" target="_blank" rel="noopener noreferrer">Login</a>
+
+
         <a href="/consultation" className="consultation-btn">Get Consultation</a>
       </div>
     </nav>

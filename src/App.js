@@ -12,6 +12,7 @@ import Marketing from "./pages/Marketing";
 import EmailMarketing from "./pages/EmailMarketing";
 import Analytics from "./pages/Analytics";
 import CRM from "./pages/CRM";
+import GetConsultation from "./pages/GetConsultation";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/email-marketing" element={<EmailMarketing />} />
           <Route path="/analytics-clarity" element={<Analytics />} />
           <Route path="/crm-system" element={<CRM />} />
+          <Route path="/consultation" element={<GetConsultation />} />
         </Routes>
         <Footer />
       </div>

@@ -1,13 +1,24 @@
 .client-logos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 40px;
-    margin-top: 20px;
-    margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 55px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.client-logos-grid img {
+  width: 130%;
+  border: 3px solid black;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .client-logos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Full-width for single line */
+    gap: 20px; /* Reduce gap on small screens */
   }
-  
+
   .client-logos-grid img {
-    width: 130%;
-    border: 3px solid black;
+    width: 100%; /* Ensure the images fit within the container */
   }
-  
+}

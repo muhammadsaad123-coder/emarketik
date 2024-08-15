@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/AboutUs.css";
 
 import MiniFooter from "../components/MiniFooter";
-import logo from "../assets/images/logo.jpg";
+import logo from "../assets/images/logo.webp";
 import about from "../assets/images/about.png";
 import about2 from "../assets/images/about2.jpg";
 
