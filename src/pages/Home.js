@@ -41,7 +41,8 @@ const Home = () => {
     <div className="home">
       <div className="hero-section">
         <div className="hero-content">
-          <h1>Get everything you need to manage and grow your</h1>
+          
+          <h1>Get everything you need to manage and grow your </h1>
           <p>
             The tools you need to scale and the marketing programs and talent
             you need to grow — all from a singular platform.
