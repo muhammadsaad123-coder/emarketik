@@ -7,14 +7,14 @@
     max-width: 1200px; /* Adjusted to allow more space */
     margin: 0 auto; /* Center container */
     gap: 15px; /* Gap between rows */
-    padding-top: 20px; 
+    padding-top: 60px; 
     background-color: aliceblue;
 }
 
 .creative-services-header {
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 20px; 
+    
 }
 
 .creative-services-header h2 {

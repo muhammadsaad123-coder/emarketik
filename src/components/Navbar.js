@@ -1,17 +1,42 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import '../styles/Navbar.css';
 import logo from '../assets/images/logo.webp';
 
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
+  const dropdownRef = useRef(null);
 
   const isActive = (path) => location.pathname === path ? 'active' : '';
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleDropdown = (e) => {
+    e.stopPropagation();
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleClickOutside = (e) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, []);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -21,40 +46,36 @@ const Navbar = () => {
       </div>
       <div className="hamburger-icon" onClick={toggleMenu}>
         {menuOpen ? (
-          <div className="close-icon">X</div>
+          <FontAwesomeIcon icon={faTimes} className="close-icon" />
         ) : (
-          <>
-            <span></span>
-            <span></span>
-            <span></span>
-          </>
+          <FontAwesomeIcon icon={faBars} className="open-icon" />
         )}
       </div>
       <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
-        <li><a href="/" className={isActive('/')}>Home</a></li>
-        <li><a href="/about-us" className={isActive('/about-us')}>About Us</a></li>
-        <li className="dropdown">
-          <a href="/creative-services" className={isActive('/creative-services')}>
-            Creative Services <span className="arrow-icon"></span>
-          </a>
-          <div className="dropdown-content">
-            <a href="/smm" className={isActive('/smm')}>SMM</a>
-            <a href="/marketing-team" className={isActive('/marketing-team')}>Marketing Team</a>
-            <a href="/email-marketing" className={isActive('/email-marketing')}>Email-Marketing</a>
-            <a href="/analytics-clarity" className={isActive('/analytics-clarity')}>Emarketick Analytics & Clarity</a>
-            <a href="/crm-system" className={isActive('/crm-system')}>Emarketick CRM System</a>
+        <li><Link to="/" className={isActive('/')} onClick={closeMenu}>Home</Link></li>
+        <li><Link to="/about-us" className={isActive('/about-us')} onClick={closeMenu}>About Us</Link></li>
+        <li className="dropdown" ref={dropdownRef}>
+          <div className="dropdown-link" onClick={toggleDropdown}>
+            <Link to="/creative-services" className={isActive('/creative-services')} onClick={closeMenu}>
+              Creative Services
+            </Link>
+            <FontAwesomeIcon icon={faChevronDown} className={`arrow-icon ${dropdownOpen ? 'dropdown-open' : ''}`} />
+          </div>
+          <div className={`dropdown-content ${dropdownOpen ? 'open' : ''}`}>
+            <Link to="/smm" className={isActive('/smm')} onClick={closeMenu}>SMM</Link>
+            <Link to="/marketing-team" className={isActive('/marketing-team')} onClick={closeMenu}>Marketing Team</Link>
+            <Link to="/email-marketing" className={isActive('/email-marketing')} onClick={closeMenu}>Email Marketing</Link>
+            <Link to="/analytics-clarity" className={isActive('/analytics-clarity')} onClick={closeMenu}>Emarketick Analytics & Clarity</Link>
+            <Link to="/crm-system" className={isActive('/crm-system')} onClick={closeMenu}>Emarketick CRM System</Link>
           </div>
         </li>
-        <li><a href="/our-clients" className={isActive('/our-clients')}>Our Clients</a></li>
-        <li><a href="/success-stories" className={isActive('/success-stories')}>Success Stories</a></li>
-        <li><a href="/contact" className={isActive('/contact')}>Contact</a></li>
+        <li><Link to="/our-clients" className={isActive('/our-clients')} onClick={closeMenu}>Our Clients</Link></li>
+        <li><Link to="/success-stories" className={isActive('/success-stories')} onClick={closeMenu}>Success Stories</Link></li>
+        <li><Link to="/contact" className={isActive('/contact')} onClick={closeMenu}>Contact</Link></li>
       </ul>
       <div className="navbar-actions">
-        
-      <a href="https://app.emarketick.com/?ng=client/login/" className="login-btn" target="_blank" rel="noopener noreferrer">Login</a>
-
-
-        <a href="/consultation" className="consultation-btn">Get Consultation</a>
+        <a href="https://app.emarketick.com/?ng=client/login/" className="login-btn" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Login</a>
+        <Link to="/consultation" className="consultation-btn" onClick={closeMenu}>Get Consultation</Link>
       </div>
     </nav>
   );

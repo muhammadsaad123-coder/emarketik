@@ -1,9 +1,13 @@
 import React from "react";
 import "../styles/GetConsultation.css";
-import  { useState } from 'react';
-import emailjs from 'emailjs-com';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneAlt, faComments, faHeadset } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhoneAlt,
+  faComments,
+  faHeadset,
+} from "@fortawesome/free-solid-svg-icons";
 
 import meta from "../assets/images/meta.png";
 import googleAds from "../assets/images/googleAds.png";
@@ -16,50 +20,53 @@ import googlePartner from "../assets/images/consultation_img/Google-Premier.webp
 import metaPartner from "../assets/images/consultation_img/Meta.webp"; // Replace with the actual path
 import microsoftPartner from "../assets/images/consultation_img/Elite.webp"; // Replace with the actual path
 
-
-
 const GetConsultation = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        companyName: '',
-        mobileNumber: '',
-        phoneNumber: '',
-        email: ''
-      });
-    
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
-        }));
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-    
-        emailjs.send(
-          'YOUR_SERVICE_ID',       // Replace with your EmailJS service ID
-          'YOUR_TEMPLATE_ID',      // Replace with your EmailJS template ID
-          formData,
-          'YOUR_USER_ID'           // Replace with your EmailJS user ID
-        ).then((result) => {
-            console.log('Email sent successfully!', result.text);
-            alert('Your request has been sent successfully!');
-          }, (error) => {
-            console.log('Failed to send email.', error.text);
-            alert('There was an error sending your request.');
-          });
-    
-        // Optionally, clear the form fields after submission
-        setFormData({
-          name: '',
-          companyName: '',
-          mobileNumber: '',
-          phoneNumber: '',
-          email: ''
-        });
-    }
+  const [formData, setFormData] = useState({
+    name: "",
+    companyName: "",
+    mobileNumber: "",
+    phoneNumber: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        formData,
+        "YOUR_USER_ID" // Replace with your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully!", result.text);
+          alert("Your request has been sent successfully!");
+        },
+        (error) => {
+          console.log("Failed to send email.", error.text);
+          alert("There was an error sending your request.");
+        }
+      );
+
+    // Optionally, clear the form fields after submission
+    setFormData({
+      name: "",
+      companyName: "",
+      mobileNumber: "",
+      phoneNumber: "",
+      email: "",
+    });
+  };
   return (
     <>
       <div className="consultation-container">
@@ -210,7 +217,7 @@ const GetConsultation = () => {
           </div>
         </div>
         <div className="gold-plan-footer">
-          <span>SOLUTION STARTING AT $249 PER MONTH</span>
+          <span>SOLUTION STARTING AT £249 PER MONTH</span>
         </div>
       </section>
 
@@ -245,7 +252,7 @@ const GetConsultation = () => {
           </div>
         </div>
         <div className="titanium-plan-footer">
-          <span>SOLUTION STARTING AT $449 PER MONTH</span>
+          <span>SOLUTION STARTING AT £449 PER MONTH</span>
         </div>
       </section>
 
@@ -260,13 +267,7 @@ const GetConsultation = () => {
             <a href="/contact" className="red-button">
               Get Free Consultation
             </a>
-            <div className="plan-price">
-              <p>SOLUTION</p>
-              <p>STARTING</p>
-              <p>AT £150</p>
-              <p>PER</p>
-              <p>MONTH</p>
-            </div>
+            <div className="plan-price"></div>
           </div>
           <div className="platinum-plan-right">
             <div className="features-box">
@@ -285,12 +286,15 @@ const GetConsultation = () => {
                   <strong>Level up with these add-ons:</strong>
                 </li>
                 <li>Brand Awareness Campaigns Included</li>
-                <li>$500 Dollar Ads Credit Included</li>
+                <li>£500 Dollar Ads Credit Included</li>
                 <li>Dedicated Social Media Advisor</li>
                 <li>5 Videos Animated Included</li>
               </ul>
             </div>
           </div>
+        </div>
+        <div className="titanium-plan-footer">
+          <span>SOLUTION STARTING AT £150 PER MONTH</span>
         </div>
       </section>
 
@@ -319,15 +323,13 @@ const GetConsultation = () => {
               <h3>1</h3>
               <h4>Get in touch</h4>
               <p>Speak to us for a free digital marketing consultation</p>
-             
             </div>
             <div className="step">
-            <div className="contact-options">
+              <div className="contact-options">
                 <p>Fill out a form</p>
                 <p>Chat now</p>
                 <p>Call us</p>
               </div>
-
             </div>
             <div className="step">
               <h3>2</h3>
@@ -356,71 +358,85 @@ const GetConsultation = () => {
       </section>
 
       <div className="contact-container">
-      <div className="form-section">
-        <h2>Request a Free Call Back</h2>
-        <p>Let's get started today.</p>
-        <form onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            placeholder="Your Name" 
-            name="name" 
-            value={formData.name}
-            onChange={handleChange}
-            required 
-          />
-          <input 
-            type="text" 
-            placeholder="Company Name" 
-            name="companyName" 
-            value={formData.companyName}
-            onChange={handleChange}
-            required 
-          />
-          <input 
-            type="text" 
-            placeholder="Mobile Number / Whatsapp" 
-            name="mobileNumber" 
-            value={formData.mobileNumber}
-            onChange={handleChange}
-            required 
-          />
-          <input 
-            type="text" 
-            placeholder="Phone / Business Number" 
-            name="phoneNumber" 
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            required 
-          />
-          <input 
-            type="email" 
-            placeholder="Email" 
-            name="email" 
-            value={formData.email}
-            onChange={handleChange}
-            required 
-          />
-          <button type="submit">Request A FREE Callback</button>
-        </form>
-        <p className="disclaimer">
-          By submitting this form, you will be sharing your contact details with emarketick Limited. We will call you in accordance with our privacy policy.
-        </p>
+        <div className="form-section">
+          <h2>Request a Free Call Back</h2>
+          <p>Let's get started today.</p>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Your Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Company Name"
+              name="companyName"
+              value={formData.companyName}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Mobile Number / Whatsapp"
+              name="mobileNumber"
+              value={formData.mobileNumber}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Phone / Business Number"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit">Request A FREE Callback</button>
+          </form>
+          <p className="disclaimer">
+            By submitting this form, you will be sharing your contact details
+            with emarketick Limited. We will call you in accordance with our
+            privacy policy.
+          </p>
+        </div>
+        <div className="contact-details">
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
+            <p>
+              <strong>020 3916 6139</strong>
+              <br />
+              MON-THU 8:30AM-6:00PM FRI 8:30AM-5:30PM
+            </p>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faComments} size="lg" />
+            <p>
+              <strong>chat with us</strong>
+              <br />
+              READY TO CHAT 24/7 - 7 DAYS A WEEK
+            </p>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faHeadset} size="lg" />
+            <p>
+              <strong>visit our support hub</strong>
+              <br />
+              WE ARE HAPPY TO ANSWER ANY OF YOUR QUESTIONS
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="contact-details">
-        <div className="contact-item">
-          <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
-          <p><strong>+92 (0) 312 0444414</strong><br/>MON-THU 8:30AM-6:00PM FRI 8:30AM-5:30PM</p>
-        </div>
-        <div className="contact-item">
-          <FontAwesomeIcon icon={faComments} size="lg" />
-          <p><strong>chat with us</strong><br/>READY TO CHAT 24/7 - 7 DAYS A WEEK</p>
-        </div>
-        <div className="contact-item">
-          <FontAwesomeIcon icon={faHeadset} size="lg" />
-          <p><strong>visit our support hub</strong><br/>WE ARE HAPPY TO ANSWER ANY OF YOUR QUESTIONS</p>
-        </div>
-      </div>
-    </div>
     </>
   );
 };

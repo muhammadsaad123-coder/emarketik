@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 30px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -20,18 +20,15 @@ body {
   z-index: 1000;
 }
 
-.navbar-logo{
+.navbar-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensure the logo container takes up the full height of the navbar */
+  height: 100%;
 }
 
-/* Logo styling */
 .navbar-logo img {
   height: 50px;
-  
-
   transition: transform 0.3s ease-in-out;
 }
 
@@ -42,30 +39,13 @@ body {
 /* Hamburger icon styling */
 .hamburger-icon {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
   cursor: pointer;
-  transition: transform 0.3s;
 }
 
-.hamburger-icon span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  transition: background-color 0.3s;
-}
-
-.hamburger-icon:hover span {
-  background-color: red;
-}
-
-.close-icon {
+.hamburger-icon .open-icon,
+.hamburger-icon .close-icon {
   font-size: 24px;
   color: #333;
-  cursor: pointer;
 }
 
 /* Navbar menu styling */
@@ -74,6 +54,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navbar-menu li {
@@ -84,33 +65,41 @@ body {
 .navbar-menu a {
   text-decoration: none;
   color: #333;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 15px;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.navbar-menu a:hover {
-  color: red;
-}
-
+.navbar-menu a:hover,
 .navbar-menu a.active {
   color: red;
 }
 
-/* Dropdown styling */
-.arrow-icon {
-  margin-left: 5px;
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  transition: transform 0.3s;
+/* Dropdown link container */
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
+.dropdown-link a {
+  flex-grow: 1;
+}
+
+/* FontAwesome arrow icon */
+.arrow-icon {
+  margin-left: auto; /* Align to the right */
+  font-size: 14px;
+  transition: transform 0.3s;
+  color: #333;
+}
+
+.arrow-icon.dropdown-open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown content styling */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -121,27 +110,29 @@ body {
   z-index: 1;
   width: 220px;
   border-radius: 5px;
+  padding: 10px 0;
+}
+
+.dropdown-content.open {
+  display: block;
 }
 
 .dropdown-content a {
-  padding: 12px 15px;
+  padding: 10px 15px;
   display: block;
   text-decoration: none;
   color: #333;
   border-bottom: 1px solid #ddd;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  color: red;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.navbar-menu .dropdown:hover .arrow-icon {
-  transform: rotate(-135deg);
+.dropdown-content a:last-child {
+  border-bottom: none;
 }
 
 /* Navbar actions (buttons) */
@@ -150,22 +141,13 @@ body {
   align-items: center;
 }
 
-.navbar-actions  {
-  height: 28px;
-  margin-right: 40px;
-  transition: transform 0.3s;
-}
-
-.navbar-actions  img:hover {
-  transform: scale(1.1);
-}
-
 .login-btn, .consultation-btn {
   margin: 0 10px;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 14px;
+  margin-right:32px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -209,16 +191,42 @@ body {
   .navbar-menu li {
     margin: 0 10px;
   }
+
+  .navbar-menu a {
+    font-size: 14px;
+  }
 }
 
 /* Responsive design for mobile devices */
 @media (max-width: 768px) {
   .navbar {
+    flex-direction: column;
     padding: 10px 20px;
   }
 
   .navbar-logo img {
-    height: 35px;
+    height: 50px;
+    width: 20px;
+    margin-bottom: 10px;
+  }
+
+  .hamburger-icon {
+    display: block;
+    align-self: flex-end;
+    margin-top: -10px;
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .login-btn, .consultation-btn {
+    width: 90%; /* Adjust width for alignment */
+    margin: 5px auto; /* Center align */
+    padding: 10px 0;
+    text-align: center;
   }
 
   .navbar-menu {
@@ -232,14 +240,84 @@ body {
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
+    padding-left: 20px; /* Add padding to align items to the left */
   }
 
   .navbar-menu.open {
     display: flex;
+    flex-direction: column; /* Ensure the items stack vertically */
+    align-items: flex-start; /* Align items to the left */
   }
 
   .navbar-menu li {
     margin: 10px 0;
+    width: 100%;
+  }
+
+  .navbar-menu a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar-menu a:hover,
+  .navbar-menu a.active {
+    color: red;
+    background-color: #f1f1f1;
+  }
+
+  .dropdown-content {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-content a {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px; 
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: red;
+  }
+
+  .arrow-icon {
+    margin-left: auto; /* Align to the right */
+    font-size: 16px; /* Increase the size of the arrow icon */
+    color: #333; /* Ensure it is visible */
+    margin-left: 20px;
+  }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-logo img {
+    height: 30px;
+  }
+
+  .hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 15px;
   }
 
   .navbar-actions {
@@ -248,52 +326,78 @@ body {
     margin-top: 10px;
   }
 
-  .navbar-actions  {
-    height: 24px;
-    margin-bottom: 10px;
-  }
-
   .login-btn, .consultation-btn {
-    width: 100%;
-    margin: 5px 0;
+    width: 90%; /* Adjust width for alignment */
     padding: 10px 0;
+    font-size: 14px;
+    margin: 5px auto; /* Center align */
     text-align: center;
   }
 
-  .hamburger-icon {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    padding-left: 20px; /* Add padding to align items to the left */
+  }
+
+  .navbar-menu.open {
     display: flex;
-  }
-}
-
-/* Responsive design for very small screens */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 10px 10px;
+    flex-direction: column; /* Ensure the items stack vertically */
+    align-items: flex-start; /* Align items to the left */
   }
 
-  .navbar-logo img {
-    height: 30px;
+  .navbar-menu li {
+    margin: 10px 0;
+    width: 100%;
   }
 
   .navbar-menu a {
-    font-size: 12px;
-    padding: 8px 10px;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
   }
 
-  .login-btn, .consultation-btn {
-    font-size: 12px;
-    padding: 8px 0;
+  .navbar-menu a:hover,
+  .navbar-menu a.active {
+    color: red;
+    background-color: #f1f1f1;
   }
 
-  .hamburger-icon {
-    display: flex;
-    position: absolute;
-    right: 20px;
-    top: 15px;
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
-}
 
-/* Main content padding adjustment */
-.main-content {
-  padding-top: 80px; /* Adjust this value based on your navbar height */
+  .dropdown-content a {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: red;
+  }
+
+  .arrow-icon {
+    /* margin-left: auto;  */
+    font-size: 16px; /* Increase the size of the arrow icon */
+    color: #333; /* Ensure it is visible */
+    margin-right: 220px;
+  }
 }
