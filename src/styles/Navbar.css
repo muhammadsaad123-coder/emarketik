@@ -3,6 +3,13 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 /* Navbar container */
@@ -10,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 15px 15px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -55,24 +62,30 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
+  margin-right: 50px;
 }
 
 .navbar-menu li {
   margin: 0 15px;
   position: relative;
+  text-align: center; /* Center align menu items */
 }
 
-.navbar-menu a {
+.navbar-menu a,
+.navbar-menu span {
   text-decoration: none;
   color: #333;
-  font-size: 16px;
-  padding: 10px 15px;
+  font-size: 13.5px;
+  padding: 10px 10px;
   font-weight: bold;
   transition: color 0.3s;
+  cursor: pointer; /* Add pointer cursor to the span element */
 }
 
 .navbar-menu a:hover,
-.navbar-menu a.active {
+.navbar-menu a.active,
+.navbar-menu span.active,
+.navbar-menu span:hover {
   color: red;
 }
 
@@ -80,23 +93,32 @@ body {
 .dropdown-link {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center align "Our Services" */
   cursor: pointer;
 }
 
-.dropdown-link a {
+.dropdown-link span {
   flex-grow: 1;
+  display: flex;
+  justify-content: center; /* Ensure the arrow is aligned with text */
+  align-items: center;
+  text-align: center; /* Center align "Our Services" text */
 }
 
 /* FontAwesome arrow icon */
 .arrow-icon {
-  margin-left: auto; /* Align to the right */
+  margin-left: 8px; /* Slightly adjust margin to balance with centered text */
   font-size: 14px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, color 0.3s;
   color: #333;
 }
 
 .arrow-icon.dropdown-open {
   transform: rotate(180deg);
+}
+
+.dropdown-link:hover .arrow-icon {
+  color: red;
 }
 
 /* Dropdown content styling */
@@ -111,10 +133,13 @@ body {
   width: 220px;
   border-radius: 5px;
   padding: 10px 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .dropdown-content.open {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-content a {
@@ -124,6 +149,7 @@ body {
   color: #333;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s, color 0.3s;
+  font-size: 14px; /* Make it consistent with other menu items */
 }
 
 .dropdown-content a:hover {
@@ -141,34 +167,22 @@ body {
   align-items: center;
 }
 
-.login-btn, .consultation-btn {
+.navbar-actions .login-btn,
+.navbar-actions .consultation-btn {
   margin: 0 10px;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 14px;
-  margin-right:32px;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.login-btn {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
-}
-
-.login-btn:hover {
-  background-color: green;
-  color: #fff;
-}
-
-.consultation-btn {
+  width: auto;
+  border: 1px solid #000; 
   background-color: #ff0000;
-  border: 1px solid red;
   color: #fff;
 }
 
-.consultation-btn:hover {
+.navbar-actions .login-btn:hover,
+.navbar-actions .consultation-btn:hover {
   background-color: #fff;
   color: #ff0000;
 }
@@ -183,7 +197,8 @@ body {
     height: 40px;
   }
 
-  .login-btn, .consultation-btn {
+  .login-btn,
+  .consultation-btn {
     padding: 8px 15px;
     font-size: 13px;
   }
@@ -205,9 +220,8 @@ body {
   }
 
   .navbar-logo img {
-    height: 50px;
-    width: 20px;
-    margin-bottom: 10px;
+    height: 100px;
+    margin-bottom: 20px;
   }
 
   .hamburger-icon {
@@ -222,11 +236,16 @@ body {
     margin-top: 10px;
   }
 
-  .login-btn, .consultation-btn {
-    width: 90%; /* Adjust width for alignment */
-    margin: 5px auto; /* Center align */
-    padding: 10px 0;
-    text-align: center;
+  .navbar-actions .login-btn, 
+  .navbar-actions .consultation-btn {
+    width: 90%; /* Set the width to 90% of the screen width */
+    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
+    padding: 12px 0; /* Adjust padding for better touch targets */
+    font-size: 14px; /* Maintain readability */
+    margin: 15px auto !important; /* Force margin to apply and add more space between buttons */
+    text-align: center; /* Center the text inside buttons */
+    border-radius: 3px; /* Slightly reduce border-radius */
+    margin-bottom: 25px; /* Ensure margin is applied */
   }
 
   .navbar-menu {
@@ -245,8 +264,8 @@ body {
 
   .navbar-menu.open {
     display: flex;
-    flex-direction: column; /* Ensure the items stack vertically */
-    align-items: flex-start; /* Align items to the left */
+    flex-direction: column;
+    align-items: center; /* Center all items in the menu */
   }
 
   .navbar-menu li {
@@ -254,17 +273,24 @@ body {
     width: 100%;
   }
 
-  .navbar-menu a {
-    padding: 10px 15px;
+  .navbar-menu a,
+  .navbar-menu span {
+    width: 90%; /* Set the width to 90% of the screen width */
+    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
+    padding: 12px 15px;
     display: block;
     text-decoration: none;
     color: #333;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s, color 0.3s;
+    margin: 5px auto; /* Center align with some margin */
+    text-align: center; /* Center align text */
   }
 
   .navbar-menu a:hover,
-  .navbar-menu a.active {
+  .navbar-menu a.active,
+  .navbar-menu span.active,
+  .navbar-menu span:hover {
     color: red;
     background-color: #f1f1f1;
   }
@@ -288,10 +314,11 @@ body {
   }
 
   .arrow-icon {
-    margin-left: auto; /* Align to the right */
-    font-size: 16px; /* Increase the size of the arrow icon */
-    color: #333; /* Ensure it is visible */
-    margin-left: 20px;
+    margin-left: 5px; 
+    font-size: 16px;
+    color: #333;
+    padding-right: 7px;
+    margin-right: 5px;
   }
 }
 
@@ -326,12 +353,15 @@ body {
     margin-top: 10px;
   }
 
-  .login-btn, .consultation-btn {
-    width: 90%; /* Adjust width for alignment */
-    padding: 10px 0;
-    font-size: 14px;
-    margin: 5px auto; /* Center align */
-    text-align: center;
+  .login-btn, 
+  .consultation-btn {
+    width: 90%; /* Set the width to 90% of the screen width */
+    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
+    padding: 12px 0; /* Adjust padding for better touch targets */
+    font-size: 14px; /* Maintain readability */
+    margin: 15px auto; /* Increase margin between buttons for better spacing */
+    text-align: center; /* Center the text inside buttons */
+    border-radius: 3px; /* Slightly reduce border-radius */
   }
 
   .navbar-menu {
@@ -345,13 +375,13 @@ body {
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
-    padding-left: 20px; /* Add padding to align items to the left */
+    padding-left: 20px;
   }
 
   .navbar-menu.open {
     display: flex;
-    flex-direction: column; /* Ensure the items stack vertically */
-    align-items: flex-start; /* Align items to the left */
+    flex-direction: column;
+    align-items: center; /* Center all items in the menu */
   }
 
   .navbar-menu li {
@@ -359,16 +389,24 @@ body {
     width: 100%;
   }
 
-  .navbar-menu a {
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    font-size: 16px;
+  .navbar-menu a,
+  .navbar-menu span {
+    width: 90%; /* Set the width to 90% of the screen width */
+    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
+    padding: 12px 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 5px auto; /* Center align with some margin */
+    text-align: center; /* Center align text */
   }
 
   .navbar-menu a:hover,
-  .navbar-menu a.active {
+  .navbar-menu a.active,
+  .navbar-menu span.active,
+  .navbar-menu span:hover {
     color: red;
     background-color: #f1f1f1;
   }
@@ -395,9 +433,8 @@ body {
   }
 
   .arrow-icon {
-    /* margin-left: auto;  */
-    font-size: 16px; /* Increase the size of the arrow icon */
-    color: #333; /* Ensure it is visible */
-    margin-right: 220px;
+    margin-left: 8px; /* Slightly adjust margin to balance with centered text */
+    font-size: 16px;
+    color: #333;
   }
 }

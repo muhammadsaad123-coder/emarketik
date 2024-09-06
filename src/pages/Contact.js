@@ -29,11 +29,22 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Map form data to the fields expected in your EmailJS template
+    const templateParams = {
+      from_name: formData.name,
+      company_name: formData.companyName,
+      mobile_number: formData.mobileNumber,
+      phone_number: formData.phoneNumber,
+      email: formData.email,
+      message: 'Your custom message here', // Replace with actual message from form if needed
+      reply_to: formData.email,
+    };
+
     emailjs.send(
-      'YOUR_SERVICE_ID',       // Replace with your EmailJS service ID
-      'YOUR_TEMPLATE_ID',      // Replace with your EmailJS template ID
-      formData,
-      'YOUR_USER_ID'           // Replace with your EmailJS user ID
+      'service_8v4t5of',          // Your EmailJS Service ID
+      'template_36nusul',         // Your EmailJS Template ID
+      templateParams,
+      'JoIeL-JI6FWIx4zfF'         // Your EmailJS User ID
     ).then((result) => {
         console.log('Email sent successfully!', result.text);
         alert('Your request has been sent successfully!');

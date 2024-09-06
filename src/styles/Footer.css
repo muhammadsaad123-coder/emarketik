@@ -17,18 +17,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* margin-top: 30px; */
 }
 
 .footer2-column {
   flex: 1;
   min-width: 50px;
-  margin: 10px 10px;
+  /* margin: 20px 20px; */
+  margin: 5px 20px; /* Reduce top margin for "Our Services" */
 }
 
 .footer2-column h3 {
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .footer2-column ul {
@@ -50,21 +50,32 @@ body {
   color: black; /* Change color on hover */
 }
 
+.footer2-logo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .footer2-logos {
   display: flex;
-  align-items: center;
-  /* margin-top: 10px; */
-  
+  justify-content: center; /* Center align the logos */
+  gap: 10px; /* Space between ads images */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  margin-bottom: 30px; /* Reduced space between logos and next section */
 }
 
 .footer2-logos img {
-  width: 80px;
-  margin-right: 10px;
+  width: 70px;
+  max-width: 100%; /* Ensure responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  padding: 5px; /* Add padding for better visual separation */
 }
 
 .navbar-logo img {
   width: 150px;
-  margin-bottom: 20px;
+  max-width: 100%; /* Ensure responsiveness */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the logo */
 }
 
 .footer2-bottom {
@@ -106,9 +117,22 @@ body {
 
 .app-links img {
   width: 120px;
+  max-width: 100%; /* Ensure responsiveness */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Responsive styling */
+@media (max-width: 1024px) {
+  .footer2-logos img {
+    width: 65px; /* Adjust size for tablets */
+    padding: 5px;
+  }
+
+  .navbar-logo img {
+    width: 130px; /* Adjust logo size for tablets */
+  }
+}
+
 @media (max-width: 768px) {
   .footer2-content,
   .footer2-bottom {
@@ -130,8 +154,20 @@ body {
   .app-links {
     justify-content: flex-start;
   }
-}
 
+  .footer2-logos {
+    justify-content: center; /* Center logos on mobile */
+  }
+
+  .footer2-logos img {
+    width: 60px; /* Adjust size for mobile */
+    padding: 8px; /* More padding for better visibility */
+  }
+
+  .navbar-logo img {
+    width: 100px; /* Adjust logo size for mobile */
+  }
+}
 
 .contact-link {
   color: #ff0000; /* Customize the color as needed */
@@ -142,4 +178,19 @@ body {
 
 .contact-link:hover {
   color: #333; /* Change color on hover */
+}
+
+.footer2-columns-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer2-column {
+  flex: 1;
+  margin-right: 15px;
+  min-width: 150px;
+}
+
+.footer2-column:last-child {
+  margin-right: 0;
 }

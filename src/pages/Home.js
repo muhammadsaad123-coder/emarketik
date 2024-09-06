@@ -32,17 +32,12 @@ import L11 from "../assets/images/home_logo/L11.webp";
 import L12 from "../assets/images/home_logo/L12.webp";
 import L13 from "../assets/images/home_logo/L13.webp";
 
-
-
-
-
 const Home = () => {
   return (
     <div className="home">
       <div className="hero-section">
         <div className="hero-content">
-          
-          <h1>Get everything you need to manage and grow your </h1>
+          <h1> Get everything you need to manage and grow your </h1>
           <p>
             The tools you need to scale and the marketing programs and talent
             you need to grow — all from a singular platform.
@@ -97,7 +92,7 @@ const Home = () => {
           <img src={develop} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L2} alt="Logo" className="logo" />
             <h2>WEBSITE DEVELOPMENT SERVICE</h2>
           </div>
@@ -114,7 +109,7 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L3} alt="Logo" className="logo" />
             <h2>Sell your products online</h2>
           </div>
@@ -137,7 +132,7 @@ const Home = () => {
           <img src={payment} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L4} alt="Logo" className="logo" />
             <h2>PAYMENTS GATEWAY INTEGRATIONS AND API'S</h2>
           </div>
@@ -154,7 +149,7 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L5} alt="Logo" className="logo" />
             <h2>ONLINE POINT OF SALE</h2>
           </div>
@@ -177,7 +172,7 @@ const Home = () => {
           <img src={crm} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L6} alt="Logo" className="logo" />
             <h2>ONLINE CRM SYSTEM</h2>
           </div>
@@ -194,7 +189,7 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L7} alt="Logo" className="logo" />
             <h2>FORMS CREATION AND DEPLOYMENT ON WEBSITES</h2>
           </div>
@@ -217,7 +212,7 @@ const Home = () => {
           <img src={email} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L8} alt="Logo" className="logo" />
             <h2>EMAIL MARKETING INTEGRATION</h2>
           </div>
@@ -234,7 +229,6 @@ const Home = () => {
       </div>
       <div className="hero-section">
         <div className="hero-content">
-          
           <div class="header-with-logo">
             <img src={L8} alt="Logo" className="logo" />
             <h2>TEXT MARKETING / BRANDED SMS INTEGRATION</h2>
@@ -259,7 +253,6 @@ const Home = () => {
           <img src={media} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-         
           <div class="header-with-logo">
             <img src={L9} alt="Logo" className="logo" />
             <h2>SOCIAL MEDIA MANAGMENT SERVICES</h2>
@@ -278,11 +271,11 @@ const Home = () => {
 
       <div className="hero-section">
         <div className="hero-content">
-        <div class="header-with-logo">
+          <div class="header-with-logo">
             <img src={L10} alt="Logo" className="logo" />
             <h2>REPUTATION REVIEWS MANAGEMENT</h2>
           </div>
-          
+
           <h1>Stand out with excellent reviews</h1>
           <p>
             Emarketick offers review management services, ensuring businesses
@@ -303,7 +296,6 @@ const Home = () => {
           <img src={seo} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          
           <div class="header-with-logo">
             <img src={L11} alt="Logo" className="logo" />
             <h2>SEO SERVICES FOR YOUR BUSINESS</h2>
@@ -322,7 +314,6 @@ const Home = () => {
 
       <div className="hero-section">
         <div className="hero-content">
-          
           <div class="header-with-logo">
             <img src={L12} alt="Logo" className="logo" />
             <h2>ADS / MEDIA BUYING SERVICES</h2>
@@ -347,7 +338,6 @@ const Home = () => {
           <img src={mobile} alt="Main" className="main-image" />
         </div>
         <div className="hero-content">
-          
           <div class="header-with-logo">
             <img src={L13} alt="Logo" className="logo" />
             <h2>emarketick Mobile App Coming Soon</h2>

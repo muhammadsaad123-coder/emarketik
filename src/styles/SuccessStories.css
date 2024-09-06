@@ -7,7 +7,7 @@
     max-width: 1200px; /* Adjusted to allow more space */
     margin: 0 auto; /* Center container */
     gap: 15px; /* Gap between rows */
-    padding-top: 60px; 
+    /* padding-top: 60px;  */
     background-color: aliceblue;
 }
 

@@ -5,9 +5,8 @@ import meta2 from "../assets/images/metafooter.png";
 import google2 from "../assets/images/googlefooter.png";
 import linked2 from "../assets/images/linkedfooter.png";
 import bing2 from "../assets/images/bingfooter.png";
-import appStore from "../assets/images/appstore.png"; // Add paths to your app store images
+import appStore from "../assets/images/appstore.png"; 
 import googlePlay from "../assets/images/playstore.png";
-
 
 // Font Awesome Imports
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,43 +16,43 @@ const Footer = () => {
   return (
     <footer className="footer2">
       <div className="footer2-content">
-        <div className="footer2-column">
+        <div className="footer2-column footer2-logo-column">
           <div className="navbar-logo">
             <img src={logo} alt="Emarketick Logo" />
           </div>
           <div className="footer2-logos">
             <img src={meta2} alt="Meta" />
             <img src={google2} alt="Google Ads" />
-          </div>
-          <div className="footer2-logos">
             <img src={linked2} alt="LinkedIn Ads" />
             <img src={bing2} alt="Bing Ads" />
           </div>
         </div>
-        <div className="footer2-column">
-          <h3>Our Services</h3>
-          <ul>
-            <li><a href="/marketing-team">Marketing Team</a></li>
-            <li><a href="/contact">Website</a></li>
-            <li><a href="/contact">Ecommerce</a></li>
-            <li><a href="/contact">Payments</a></li>
-            <li><a href="/contact">Point of Sale</a></li>
-            <li><a href="/contact">CRM</a></li>
-            <li><a href="/contact">Forms</a></li>
-          </ul>
-        </div>
-        <div className="footer2-column">
-          {/* <h3>Services by Industry</h3> */}
-          <ul>
-            <li><a href="/email-marketing">Email Marketing</a></li>
-            <li><a href="/contact">Listings</a></li>
-            <li><a href="/contact">Reputation</a></li>
-            <li><a href="/smm">Social</a></li>
-            <li><a href="/contact">Content</a></li>
-            <li><a href="/contact">Ads</a></li>
-            <li><a href="/contact">Intelligence</a></li>
-          </ul>
-        </div>
+    <div className="footer2-columns-container">
+  <div className="footer2-column">
+    <h3>Our Services</h3>
+    <ul>
+      <li><a href="/marketing-team">Marketing Team</a></li>
+      <li><a href="/contact">Website</a></li>
+      <li><a href="/contact">Ecommerce</a></li>
+      <li><a href="/contact">Payments</a></li>
+      <li><a href="/contact">Point of Sale</a></li>
+      <li><a href="/contact">CRM</a></li>
+      <li><a href="/contact">Forms</a></li>
+    </ul>
+  </div>
+  <div className="footer2-column">
+    <h3>&nbsp;</h3> {/* This empty header is to keep alignment consistent */}
+    <ul>
+      <li><a href="/email-marketing">Email Marketing</a></li>
+      <li><a href="/contact">Listings</a></li>
+      <li><a href="/contact">Reputation</a></li>
+      <li><a href="/smm">Social</a></li>
+      <li><a href="/contact">Content</a></li>
+      <li><a href="/contact">Ads</a></li>
+      <li><a href="/contact">Intelligence</a></li>
+    </ul>
+  </div>
+</div>
 
         <div className="footer2-column">
           <h3>Services by Industry</h3>
@@ -85,21 +84,19 @@ const Footer = () => {
             <li><a href="/contact">Contact Us</a></li>
           </ul>
           <div className="contact-section">
-        <h3>UK Contact</h3>
-        <p>
-          <a href="tel:02039166139" className="contact-link">
-            020 3916 6139
-          </a>
-        </p>
-
-        <h3>Outside UK Contact</h3>
-        <p>
-          <a href="tel:+442039166139" className="contact-link">
-            +44 2039166139
-          </a>
-        </p>
-      </div>
-          
+            <h3>UK Contact</h3>
+            <p>
+              <a href="tel:02039166139" className="contact-link">
+                020 3916 6139
+              </a>
+            </p>
+            <h3>Outside UK Contact</h3>
+            <p>
+              <a href="tel:+442039166139" className="contact-link">
+                +44 2039166139
+              </a>
+            </p>
+          </div>
         </div>
       </div>
       <div className="footer2-bottom">
@@ -112,6 +109,8 @@ const Footer = () => {
             <a href="https://www.linkedin.com"><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
           <p>emarketick Limited is a Registered Organization Of United Kingdom</p>
+          <h4>This website was created by Muhammad Saad, a student of COMSATS Attock. If you would like a similar website, feel free to contact me at 0322-5425081.</h4>
+
         </div>
         <div className="footer2-bottom-right">
           <p>Create a emarketick© account and download our <a href="/mobile-app">mobile app</a></p>
