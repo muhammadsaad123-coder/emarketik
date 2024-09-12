@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import "../styles/Navbar.css";
 import logo from "../assets/images/logo.webp";
 
@@ -82,46 +86,65 @@ const Navbar = () => {
             </span>
           </div>
           <div className={`dropdown-content ${dropdownOpen ? "open" : ""}`}>
-            <Link
-              to="/creative-services"
-              className={isActive("/creative-services")}
-              onClick={handleDropdownItemClick}
-            >
-              Creative Services
-            </Link>
-            <Link to="/smm" className={isActive("/smm")} onClick={handleDropdownItemClick}>
-              SMM
-            </Link>
-            <Link
-              to="/marketing-team"
-              className={isActive("/marketing-team")}
-              onClick={handleDropdownItemClick}
-            >
-              Marketing Team
-            </Link>
-            <Link
-              to="/email-marketing"
-              className={isActive("/email-marketing")}
-              onClick={handleDropdownItemClick}
-            >
-              Email Marketing
-            </Link>
-            <Link
-              to="/analytics-clarity"
-              className={isActive("/analytics-clarity")}
-              onClick={handleDropdownItemClick}
-            >
-              Emarketick Analytics & Clarity
-            </Link>
-            <Link
-              to="/crm-system"
-              className={isActive("/crm-system")}
-              onClick={handleDropdownItemClick}
-            >
-              Emarketick CRM System
-            </Link>
+            <ol>
+              <li>
+                <Link
+                  to="/creative-services"
+                  className={isActive("/creative-services")}
+                  onClick={handleDropdownItemClick}
+                >
+                  Creative Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/smm"
+                  className={isActive("/smm")}
+                  onClick={handleDropdownItemClick}
+                >
+                  SMM
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/marketing-team"
+                  className={isActive("/marketing-team")}
+                  onClick={handleDropdownItemClick}
+                >
+                  Marketing Team
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/email-marketing"
+                  className={isActive("/email-marketing")}
+                  onClick={handleDropdownItemClick}
+                >
+                  Email Marketing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/analytics-clarity"
+                  className={isActive("/analytics-clarity")}
+                  onClick={handleDropdownItemClick}
+                >
+                  Emarketick Analytics & Clarity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/crm-system"
+                  className={isActive("/crm-system")}
+                  onClick={handleDropdownItemClick}
+                >
+                  Emarketick CRM System
+                </Link>
+              </li>
+            </ol>
           </div>
         </li>
+
         <li>
           <Link
             to="/our-clients"

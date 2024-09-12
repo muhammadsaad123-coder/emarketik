@@ -167,6 +167,14 @@ body {
   .navbar-logo img {
     width: 100px; /* Adjust logo size for mobile */
   }
+  .footer2-watermark {
+    font-size: 12px; /* Adjust font size for mobile */
+    margin-top: 15px; /* Reduced space for smaller screens */
+  }
+
+  .footer2-watermark a {
+    font-size: 12px; /* Adjust link font size for mobile */
+  }
 }
 
 .contact-link {
@@ -193,4 +201,25 @@ body {
 
 .footer2-column:last-child {
   margin-right: 0;
+}
+
+.footer2-watermark {
+  font-size: 14px; /* Adjust font size for mobile */
+    padding: 0 10px; /* Reduced padding for smaller screens */
+    margin: 15px auto; /* Adjust margin for smaller screens */
+}
+
+.footer2-watermark p {
+  margin: 0;
+}
+
+.footer2-watermark a {
+  color: #ff0000; /* Custom color for contact number */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px; 
+}
+
+.footer2-watermark a:hover {
+  text-decoration: underline;
 }

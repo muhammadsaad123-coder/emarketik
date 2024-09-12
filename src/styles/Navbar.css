@@ -5,6 +5,9 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
 }
+/* Disable scrolling when the menu is open */
+
+
 
 *,
 *::before,
@@ -26,6 +29,7 @@ body {
   width: 100%;
   z-index: 1000;
 }
+
 
 .navbar-logo {
   display: flex;
@@ -107,7 +111,7 @@ body {
 
 /* FontAwesome arrow icon */
 .arrow-icon {
-  margin-left: 8px; /* Slightly adjust margin to balance with centered text */
+  margin-left: 15px; /* Slightly adjust margin to balance with centered text */
   font-size: 14px;
   transition: transform 0.3s, color 0.3s;
   color: #333;
@@ -122,6 +126,7 @@ body {
 }
 
 /* Dropdown content styling */
+/* Dropdown content styling */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -130,10 +135,12 @@ body {
   background-color: #fff;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 220px;
-  border-radius: 5px;
+  width: 250px; /* Adjusted width for a better look */
+  border-radius: 8px; /* Smoothen the corners */
   padding: 10px 0;
   transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(-10px); /* Slight animation for dropdown */
 }
 
 .dropdown-content.open {
@@ -142,24 +149,45 @@ body {
   transform: translateY(0);
 }
 
-.dropdown-content a {
-  padding: 10px 15px;
-  display: block;
-  text-decoration: none;
+/* Styling the ordered list */
+.dropdown-content ol {
+  padding: 10px 20px; /* Add padding for spacing inside the list */
+  list-style: none; /* Hide the default list style */
+  margin: 0;
+  counter-reset: item; /* Reset the counter for the list items */
+}
+
+.dropdown-content ol li {
+  padding: 10px 0; /* Space between list items */
+  border-bottom: 1px solid #ddd; /* Subtle divider */
+  font-size: 15px; /* Adjust font size for readability */
+  font-weight: 500; /* Slightly bold */
   color: #333;
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 14px; /* Make it consistent with other menu items */
+  counter-increment: item; /* Increment the counter for each list item */
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-  color: red;
+.dropdown-content ol li:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+  color: red; /* Change text color on hover */
 }
 
-.dropdown-content a:last-child {
+/* Remove last item's border */
+.dropdown-content ol li:last-child {
   border-bottom: none;
 }
+
+/* Style for list numbers */
+.dropdown-content ol li::before {
+  content: counter(item) ". "; /* Add a period after the number */
+  color: #333; /* Change number color */
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
 
 /* Navbar actions (buttons) */
 .navbar-actions {
@@ -227,7 +255,6 @@ body {
   .hamburger-icon {
     display: block;
     align-self: flex-end;
-    margin-top: -10px;
   }
 
   .navbar-actions {
@@ -238,53 +265,56 @@ body {
 
   .navbar-actions .login-btn, 
   .navbar-actions .consultation-btn {
-    width: 90%; /* Set the width to 90% of the screen width */
-    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
-    padding: 12px 0; /* Adjust padding for better touch targets */
-    font-size: 14px; /* Maintain readability */
-    margin: 15px auto !important; /* Force margin to apply and add more space between buttons */
-    text-align: center; /* Center the text inside buttons */
-    border-radius: 3px; /* Slightly reduce border-radius */
-    margin-bottom: 25px; /* Ensure margin is applied */
+    width: 90%; 
+    max-width: 300px; 
+    padding: 12px 0; 
+    font-size: 14px; 
+    margin: 15px auto !important; 
+    text-align: center;
+    border-radius: 3px; 
+    margin-bottom: 25px; 
   }
 
   .navbar-menu {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     background-color: #fff;
-    position: absolute;
-    top: 60px;
+    position: fixed; /* Fixed position to cover the entire screen */
+    top: 0;
     left: 0;
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 10px 10px;
-    padding-left: 20px; /* Add padding to align items to the left */
+    border-radius: 0; /* Remove border-radius for full-screen */
+    padding-left: 0; /* Remove padding to center items */
+    text-align: center; /* Center align the text */
+    overflow-y: auto; /* Allow scrolling if content overflows */
   }
-
+  
   .navbar-menu.open {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center all items in the menu */
+    align-items: center; /* Center align items */
   }
 
   .navbar-menu li {
-    margin: 10px 0;
+    margin: 20px 0; /* Adjusted margin to suit full screen */
     width: 100%;
+    text-align: center; /* Center align list items */
   }
 
   .navbar-menu a,
   .navbar-menu span {
-    width: 90%; /* Set the width to 90% of the screen width */
-    max-width: 300px; /* Set a maximum width to prevent it from being too wide */
+    width: auto; /* Let the content define width, instead of 90% */
+    max-width: 300px;
     padding: 12px 15px;
     display: block;
     text-decoration: none;
     color: #333;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s, color 0.3s;
-    margin: 5px auto; /* Center align with some margin */
-    text-align: center; /* Center align text */
+    text-align: center; /* Center align the text inside each item */
   }
 
   .navbar-menu a:hover,
@@ -295,32 +325,41 @@ body {
     background-color: #f1f1f1;
   }
 
+  /* Mobile-specific dropdown content styling */
   .dropdown-content {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px; /* Adjust font size for smaller screens */
+    border-bottom: none; /* Simplified border on mobile */
   }
 
-  .dropdown-content a {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px; 
+  .dropdown-content ol {
+    padding: 0;
+    margin: 0;
   }
 
-  .dropdown-content a:hover {
+  .dropdown-content ol li {
+    padding: 8px 10px;
+    font-size: 14px; /* Smaller font size on mobile */
+    margin-bottom: 10px;
+  }
+
+  .dropdown-content ol li::before {
+    font-size: 14px; /* Adjust the number font size to match */
+  }
+
+  .dropdown-content ol li:hover {
     background-color: #f1f1f1;
     color: red;
   }
 
-  .arrow-icon {
-    margin-left: 5px; 
-    font-size: 16px;
-    color: #333;
-    padding-right: 7px;
-    margin-right: 5px;
+  /* Set the width of dropdown to be 90% of the screen, centered */
+  .dropdown-content {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto; 
   }
 }
+
 
 /* Responsive design for very small screens */
 @media (max-width: 480px) {
@@ -426,6 +465,7 @@ body {
     font-size: 16px;
     border-bottom: 1px solid #ddd;
   }
+  
 
   .dropdown-content a:hover {
     background-color: #f1f1f1;
@@ -438,3 +478,5 @@ body {
     color: #333;
   }
 }
+
+

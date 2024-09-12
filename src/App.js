@@ -15,6 +15,7 @@ import CRM from "./pages/CRM";
 import GetConsultation from "./pages/GetConsultation";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTopAndReset from "./components/ScrollToTopAndReset";
 import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <ScrollToTopAndReset />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
